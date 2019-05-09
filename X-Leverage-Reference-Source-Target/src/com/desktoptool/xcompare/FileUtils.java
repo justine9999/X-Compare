@@ -83,7 +83,7 @@ public class FileUtils {
 			if(read_source){
 				Element source = segment.element("source");
 				if(source != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText().trim(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
 					listsegments.add(xsegment);
 				}else{
 					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
@@ -92,7 +92,7 @@ public class FileUtils {
 			}else{
 				Element target = segment.element("target");
 				if(target != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText().trim(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
 					listsegments.add(xsegment);
 				}else{
 					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
@@ -118,7 +118,7 @@ public class FileUtils {
 			if(read_source){
 				Element source = transunit.element("source");
 				if(source != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText().trim(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
 					listsegments.add(xsegment);
 				}else{
 					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
@@ -127,7 +127,7 @@ public class FileUtils {
 			}else{
 				Element target = transunit.element("target");
 				if(target != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText().trim(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
 					listsegments.add(xsegment);
 				}else{
 					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");

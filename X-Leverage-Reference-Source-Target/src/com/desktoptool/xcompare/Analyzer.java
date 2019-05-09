@@ -15,9 +15,11 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,6 +37,9 @@ import com.aspose.cells.CellArea;
 import com.aspose.cells.CellBorderType;
 import com.aspose.cells.Cells;
 import com.aspose.cells.Comment;
+import com.aspose.cells.FormatConditionCollection;
+import com.aspose.cells.FormatConditionType;
+import com.aspose.cells.OperatorType;
 import com.aspose.cells.Range;
 import com.aspose.cells.ShiftType;
 import com.aspose.cells.Style;
@@ -59,6 +64,8 @@ public class Analyzer {
 	private StringBuffer sb;
 	private int sourcefilecount;
 	boolean isRunAgainstTargetReference = false;
+	
+	private static String NULL_SOURCE_REFERENCE_STR = "X_COMPARE_NULL_SOURCE_REFERENCE_STR";
 	//int count = 0;
 	
 	public Analyzer(com.desktoptool.xcompare.Configuration config, int jobid, List<String> progresses, StringBuffer sb) {
@@ -75,7 +82,9 @@ public class Analyzer {
 	
 	public void analyze(List<String> sourcefiles, List<String> sourceReferencefiles, List<String> targetReferencefiles, String languagePairCode, String outputDirectory) throws Exception {
 
-		if(targetReferencefiles.size() != 0) this.isRunAgainstTargetReference = true;
+		if(targetReferencefiles.size() != 0 && !config.isAutoalign_previous_translation()){
+			this.isRunAgainstTargetReference = true;
+		}
 		
 		String sourcelanguage = languagePairCode.split("_")[0];
 		String targetlanguage = languagePairCode.split("_")[1];
@@ -98,7 +107,7 @@ public class Analyzer {
 		}
 		
 		//align source reference and target reference text
-		HashMap<String, String[]> align_results = new HashMap<String, String[]>();
+		LinkedHashMap<String, String[]> align_results = new LinkedHashMap<String, String[]>();
 		if(config.isAutoalign_previous_translation()){
 			sb.append("[aligning source reference files and target reference files]\n");
 			progresses.set(this.jobid, "A");
@@ -126,7 +135,11 @@ public class Analyzer {
 			
 			Worksheet sheet = workbook.getWorksheets().add(tabName);
 			sheet.setZoom(75);
-			analyze_internal(sourcefile, source_reference_xsegments, target_reference_xsegments, sheet, sourcelanguage, targetlanguage, align_results, index);
+			
+			String orphanTabName = "Tab - " + index + " - orphan";
+			Worksheet sheet_orphan = workbook.getWorksheets().add(orphanTabName);
+			
+			analyze_internal(sourcefile, source_reference_xsegments, target_reference_xsegments, sheet, sheet_orphan, sourcelanguage, targetlanguage, align_results, index);
 			
 			index++;
 		}
@@ -213,6 +226,7 @@ public class Analyzer {
 		Workbook cw = new Workbook(newreport);
 		cw.getWorksheets().get(1).getComments().clear();
 		ow.getWorksheets().get(1).getComments().clear();
+
 		Cells ocells = ow.getWorksheets().get(1).getCells();
 		Cells ccells = cw.getWorksheets().get(1).getCells();
 		
@@ -223,8 +237,7 @@ public class Analyzer {
 			CellArea cellarea = (CellArea)ocellarea;
 			ccells.get(cellarea.StartRow, cellarea.StartColumn).getMergedRange().unMerge();
 		}
-		
-		for(int c = 0; c <= 6; c++){
+		for(int c = 0; c <= 6; c++){	
 			for(int r = 0; r <= ocells.getMaxRow(); r++){
 				Cell ccell = ccells.get(r, c);
 				Cell ocell = ocells.get(r, c);
@@ -266,8 +279,11 @@ public class Analyzer {
 			recreateTracksAndScores(start, cidx, ccells, 7, targetlanguage);
 						
 			deleteEmptyRange(oidx+1, ccells, 1, 0, 6);
-			deleteEmptyRange(cidx+1, ccells, 7, 7, 12);
-			
+			boolean hasTarget = !ccells.get(start, 7).getDisplayStringValue().trim().equals("");
+			if(hasTarget){
+				deleteEmptyRange(cidx+1, ccells, 7, 7, 12);
+			}
+
 			if(oidx > cidx){
 				insertEmptyRange(ccells, cidx+1, oidx, 7, 12);
 			}else if(cidx > oidx){
@@ -288,7 +304,7 @@ public class Analyzer {
 			
 			int final_source_match_cnt = countMathces(start, start+max_span-1, 6, ccells);
 			int final_target_match_cnt = countMathces(start, start+max_span-1, 12, ccells);
-			formatSourceIdCell(start, max_span, final_source_match_cnt, final_target_match_cnt, ccells);
+			formatSourceIdCell(start, max_span, final_source_match_cnt, final_target_match_cnt, ccells, hasTarget);
 			
 			start += max_span;
 			
@@ -298,7 +314,39 @@ public class Analyzer {
 							&& ccells.get(start, 8).getStringValue().equals("")){
 				break;
 			}
-		}		
+		}
+		
+		if(config.isAutoalign_previous_translation()){
+			
+			Cells ocells_orphan = ow.getWorksheets().get(2).getCells();
+			Cells ccells_orphan = cw.getWorksheets().get(2).getCells();
+			if(config.isAutoalign_previous_translation()){
+				ccells_orphan.clearContents(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
+				ccells_orphan.clearFormats(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
+				ccells_orphan.clearRange(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
+				for(int c = 0; c <= 3; c++){
+					for(int r = 0; r <= ocells_orphan.getMaxRow(); r++){
+						Cell ccell_orphan = ccells_orphan.get(r, c);
+						Cell ocell_orphan = ocells_orphan.get(r, c);
+						ccell_orphan.setValue(ocell_orphan.getValue());
+						ccell_orphan.setStyle(ocell_orphan.getStyle());
+					}
+				}
+			}
+			
+			for(int c = 7; c <= 12; c++){	
+				for(int r = 0; r <= ocells.getMaxRow(); r++){
+					Cell ccell = ccells.get(r, c);
+					Cell ocell = ocells.get(r, c);
+					if(r > 0 && c == 7){
+						ccell.setFormula(ocell.getFormula());
+					}else{
+						ccell.setValue(ocell.getValue());
+					}
+					ccell.setStyle(ocell.getStyle());
+				}
+			}
+		}
 		
 		cw.save(newreport);
 		
@@ -434,7 +482,7 @@ public class Analyzer {
 		}
 	}
 	
-	private void analyze_internal(String sourcefile, List<XSegment> source_reference_xsegments, List<XSegment> target_reference_xsegments, Worksheet sheet, String sourcelanguage, String targetlanguage, HashMap<String, String[]> align_results, int index) throws Exception {
+	private void analyze_internal(String sourcefile, List<XSegment> source_reference_xsegments, List<XSegment> target_reference_xsegments, Worksheet sheet, Worksheet sheet_orphan, String sourcelanguage, String targetlanguage, LinkedHashMap<String, String[]> align_results, int index) throws Exception {
 		
 		List<XSegment> source_xsegments = new ArrayList<XSegment>();
 		List<XSegment> target_xsegments = new ArrayList<XSegment>();
@@ -480,6 +528,11 @@ public class Analyzer {
 		//store the boundaries of the concatenated normalized string
 		int[][] trg_boundaries_normalized = new int[target_reference_xsegments.size()][2];
 		String trg_concatReferenceStr_normalized = concatenateAllReferenceText(target_reference_xsegments, trg_boundaries_normalized, true);
+		
+		//store used aligned entry, key is the source reference text
+		HashSet<String> usedAlignedEntrySource = new HashSet<String>();
+		
+		int end_cell_index = 0;
 
 		for(int i = 0; i < source_xsegments.size(); i++) {
 			
@@ -528,7 +581,9 @@ public class Analyzer {
 			int final_trg_match_cnt = target_similar_reference_segments.size();
 			
 			int max_span = Math.max(1, Math.max(src_ref_map.size(), trg_ref_map.size()));
-			formatSourceIdCell(cell_start_index, max_span, final_src_match_cnt, final_trg_match_cnt, cells);
+			
+			boolean hasTarget = !target_xsegment.getContent().trim().equals("");
+			formatSourceIdCell(cell_start_index, max_span, final_src_match_cnt, final_trg_match_cnt, cells, hasTarget);
 			
 			int org_cell_start_index = cell_start_index;
 			//write source comparison into excel
@@ -539,6 +594,8 @@ public class Analyzer {
 				
 				cells.get(cell_start_index, 0).setValue(Integer.parseInt(source_xsegment.getSegment_id()));
 				cells.get(cell_start_index, 1).setValue(source_xsegment.getContent());
+				
+				String used_ref_text = null;
 				
 				for(String text : src_ref_map.keySet()){
 					String ref_text = text.split("#%#")[0];
@@ -568,17 +625,23 @@ public class Analyzer {
 					cell_start_index++;
 					
 					//get highest match from aligned target reference text
-					if(align_results.containsKey(ref_normalized_text)){
+					if(align_results.containsKey(ref_text)){
 						int source_match_score = score_text.equals("100-")?100:Integer.parseInt(score_text);
-						int score_cur = Integer.parseInt(align_results.get(ref_normalized_text)[1]);
+						int score_cur = Integer.parseInt(align_results.get(ref_text)[1]);
 						//int final_score = score_cur * source_match_score / 100;
 						int final_score = source_match_score;
 						if(final_score > align_score && final_score >= config.getThreshold_noraml()){
 							align_score = final_score;
-							aligned_trg_text = align_results.get(ref_normalized_text)[0];
+							used_ref_text = ref_text;
+							aligned_trg_text = align_results.get(ref_text)[0];
 							autoaligner_confidence_score = score_cur;
 						}
 					}
+				}
+				
+				if(used_ref_text != null){
+					
+					usedAlignedEntrySource.add(used_ref_text);
 				}
 				
 				for(int k = src_ref_map.size(); k < max_span; k++) {
@@ -617,13 +680,13 @@ public class Analyzer {
 			range_source_notes.merge();
 			
 			
-			
+			end_cell_index = cell_start_index;
 			cell_start_index = org_cell_start_index;
 			//write target comparison into excel
 			
 			if(config.isAutoalign_previous_translation()){
 				
-				cells.get(cell_start_index, 7).setValue(aligned_trg_text + " - [ " + autoaligner_confidence_score + " ]");
+				cells.get(cell_start_index, 7).setFormula("=INDEX('" + sheet_orphan.getName() + "'!B2:B" + (align_results.size()+1) + ",MATCH(TRUE,INDEX('" + sheet_orphan.getName() + "'!A2:A" + (align_results.size()+1) + "=C" + (cell_start_index+1) + ",0),0))");
 				aligned_targets[i] = aligned_trg_text;
 				aligned_final_score[i] = align_score;
 				
@@ -720,6 +783,63 @@ public class Analyzer {
 			FileUtils.populateAlignedOldTargets(populatedfile, aligned_targets, aligned_final_score, config);
 		}
 		
+		populateOrphanTab(sheet, end_cell_index-1, sheet_orphan, align_results, usedAlignedEntrySource);
+	}
+	
+	private void populateOrphanTab(Worksheet sheet, int end_cell_index, Worksheet sheet_orphan, LinkedHashMap<String, String[]> align_results, HashSet<String> usedAlignedEntrySource){
+		
+		Cells cells = sheet_orphan.getCells();
+		cells.get(0,0).setValue("Source Reference Text");
+		cells.get(0,1).setValue("Target Text");
+		cells.get(0,2).setValue("Source Reference Used");
+		cells.get(0,3).setValue("Target Used");
+		formatOrphanHeaderRow(sheet_orphan, cells);
+		
+		Iterator it = align_results.entrySet().iterator();
+		int idx = 1;
+		while(it.hasNext()){
+			Map.Entry<String, String[]> entry = (Map.Entry<String, String[]>)it.next();
+			String source = entry.getKey();
+			String target = entry.getValue()[0];
+			String score = entry.getValue()[1];
+			
+			if(!source.startsWith(NULL_SOURCE_REFERENCE_STR)){
+				cells.get(idx, 0).setValue(source);
+			}else{
+				cells.get(idx, 0).setValue("--------");
+			}
+			
+			//conditional formatting
+			int index_s = sheet_orphan.getConditionalFormattings().add();
+			FormatConditionCollection fcs_s = sheet_orphan.getConditionalFormattings().get(index_s);
+			CellArea ca_s = new CellArea();
+			ca_s.StartRow = ca_s.EndRow = idx;
+			ca_s.StartColumn = ca_s.EndColumn = 0;
+			fcs_s.addArea(ca_s);
+			int fcindex_s = fcs_s.addCondition(FormatConditionType.EXPRESSION, OperatorType.NONE, "=IF(C" + (idx+1) + "=TRUE,TRUE,FALSE)", "");
+			fcs_s.get(fcindex_s).getStyle().setBackgroundColor(com.aspose.cells.Color.fromArgb(255, 243, 203));
+			
+			cells.get(idx, 1).setValue(target + " - [ " + score + " ]");
+			
+			//conditional formatting
+			int index_t = sheet_orphan.getConditionalFormattings().add();
+			FormatConditionCollection fcs_t = sheet_orphan.getConditionalFormattings().get(index_t);
+			CellArea ca_t = new CellArea();
+			ca_t.StartRow = ca_t.EndRow = idx;
+			ca_t.StartColumn = ca_t.EndColumn = 1;
+			fcs_t.addArea(ca_t);
+			int fcindex_t = fcs_t.addCondition(FormatConditionType.EXPRESSION, OperatorType.NONE, "=IF(D" + (idx+1) + "=TRUE,TRUE,FALSE)", "");
+			fcs_t.get(fcindex_t).getStyle().setBackgroundColor(com.aspose.cells.Color.fromArgb(255, 243, 203));
+			
+			cells.get(idx, 2).setFormula("=NOT(ISERROR(MATCH(TRUE,INDEX('" + sheet.getName() + "'!C2:C" + end_cell_index + "=A" + (idx+1) + ",0),0)))");
+			cells.get(idx, 3).setFormula("=NOT(ISERROR(MATCH(TRUE,INDEX('" + sheet.getName() + "'!H2:H" + end_cell_index + "=B" + (idx+1) + ",0),0)))");
+			
+			formatOrphanRow(sheet_orphan, cells, idx, usedAlignedEntrySource.contains(source));
+			
+			idx++;
+		}
+		
+		sheet_orphan.freezePanes(1, 0, 1, 30);
 	}
 	
 	private String concatenateAllReferenceText(List<XSegment> reference_xsegments, int[][] boundaries, boolean isNormalize) {
@@ -901,6 +1021,63 @@ public class Analyzer {
 		}
 	}
 	
+	private void formatOrphanRow(Worksheet sheet, Cells cells, int row, boolean isUsed){
+		
+		Range range = cells.createRange(row, 0, 1, 2);
+   		range.setColumnWidth(70.0D);
+   		Style style = sheet.getWorkbook().createStyle();
+   		style.setTextWrapped(true);
+   		style.setHorizontalAlignment(TextAlignmentType.LEFT);
+   		style.setIndentLevel(1);
+   		style.setVerticalAlignment(TextAlignmentType.CENTER);
+   		style.setPattern(1);
+   		if(isUsed){
+   			//style.setForegroundColor(com.aspose.cells.Color.fromArgb(255, 243, 203));
+   		}
+   		
+   		style.setBorder(BorderType.TOP_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.BOTTOM_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.LEFT_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.RIGHT_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		StyleFlag styleFlag = new StyleFlag();
+   		styleFlag.setAll(true);
+   		range.applyStyle(style, styleFlag);
+   		
+   		//format indicator
+   		range = cells.createRange(row, 2, 1, 2);
+   		range.setColumnWidth(25.0D);
+   		style = sheet.getWorkbook().createStyle();
+   		style.setHorizontalAlignment(TextAlignmentType.CENTER);
+   		style.setVerticalAlignment(TextAlignmentType.CENTER);
+   		style.setPattern(1);
+   		
+   		style.setBorder(BorderType.TOP_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.BOTTOM_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.LEFT_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.RIGHT_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		styleFlag = new StyleFlag();
+   		styleFlag.setAll(true);
+   		range.applyStyle(style, styleFlag);
+	}
+	
+	private void formatOrphanHeaderRow(Worksheet sheet, Cells cells){
+		
+		Range range = cells.createRange(0, 0, 1, 4);
+   		Style style = sheet.getWorkbook().createStyle();
+   		style.getFont().setBold(true);
+   		style.setHorizontalAlignment(TextAlignmentType.CENTER);
+   		style.setVerticalAlignment(TextAlignmentType.CENTER);
+   		style.setPattern(1);
+   		style.setForegroundColor(com.aspose.cells.Color.fromArgb(237, 237, 237));
+   		style.setBorder(BorderType.TOP_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.BOTTOM_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.LEFT_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		style.setBorder(BorderType.RIGHT_BORDER,CellBorderType.THIN,com.aspose.cells.Color.getBlack());
+   		StyleFlag styleFlag = new StyleFlag();
+   		styleFlag.setAll(true);
+   		range.applyStyle(style, styleFlag);
+	}	
+	
 	private void formatSimilarityScoreCell(Cell cell, Cells cells) {
 		
 		if(cell.getValue() == null) return;
@@ -950,7 +1127,7 @@ public class Analyzer {
    		range.applyStyle(style, styleFlag);
 	}
 	
-	private void formatSourceIdCell(int start, int span, int src_size, int trg_size, Cells cells) {
+	private void formatSourceIdCell(int start, int span, int src_size, int trg_size, Cells cells, boolean hasTarget) {
 		
 		//source segment id
 		Range range = cells.createRange(start,0,span,1);
@@ -960,7 +1137,7 @@ public class Analyzer {
    		style.setHorizontalAlignment(TextAlignmentType.CENTER);
    		style.setVerticalAlignment(TextAlignmentType.CENTER);
    		style.setPattern(1);
-   		if(src_size != trg_size && this.isRunAgainstTargetReference){
+   		if(src_size != trg_size && this.isRunAgainstTargetReference && hasTarget){
    			style.setForegroundColor(com.aspose.cells.Color.fromArgb(255, 199, 206));
    			Cell cell = cells.get(start, 0);
    			int idx = cell.getWorksheet().getComments().add(start, 0);
@@ -1614,9 +1791,9 @@ public class Analyzer {
     	cleaner.cleanupFiles(txmls);
 	}
 	
-	public HashMap<String, String[]> AutoAlignSourceAndTargetReference(List<XSegment> source_reference_xsegments, List<XSegment> target_reference_xsegments, String sourcelanguage, String targetlanguage) throws Exception{
+	public LinkedHashMap<String, String[]> AutoAlignSourceAndTargetReference(List<XSegment> source_reference_xsegments, List<XSegment> target_reference_xsegments, String sourcelanguage, String targetlanguage) throws Exception{
 		
-		HashMap<String, String[]> results = new HashMap<String, String[]>();
+		LinkedHashMap<String, String[]> results = new LinkedHashMap<String, String[]>();
 		
 		String nbalignerfolder = tempfolder + File.separator + "nbaligner";
 	    if (!new File(nbalignerfolder).exists()) {
@@ -1652,7 +1829,7 @@ public class Analyzer {
 	    	org.dom4j.Element segment_src = translatable_src.addElement("segment");
 	        segment_src.addAttribute("segmentId", Integer.toString(segmentId));   
 	        segmentId++;
-	        segment_src.addElement("source").setText(segment.getNormalized_content());
+	        segment_src.addElement("source").setText(segment.getContent());
 	    }
 	    
 	    segmentId = 0;
@@ -1661,7 +1838,7 @@ public class Analyzer {
 	    	org.dom4j.Element segment_trg = translatable_trg.addElement("segment");
 	    	segment_trg.addAttribute("segmentId", Integer.toString(segmentId));   
 	        segmentId++;
-	        segment_trg.addElement("source").setText(segment.getNormalized_content());
+	        segment_trg.addElement("source").setText(segment.getContent());
 	    }
 	    
 	    OutputStreamWriter writer = new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(nbsourcefolder + File.separator + sourcelanguage + ".txml")), "UTF8");
@@ -1719,6 +1896,7 @@ public class Analyzer {
 	    SAXReader reader = new SAXReader();
 	    org.dom4j.Document alignedtxmldoc = reader.read(alignedtxml);
 	    org.dom4j.Element root_alignedtxmldoc = alignedtxmldoc.getRootElement();
+	    int no_source_index = 0;
 	    for (int i = 0; i < root_alignedtxmldoc.elements("translatable").size(); i++)
 	    {
 	    	org.dom4j.Element translatable = (org.dom4j.Element)root_alignedtxmldoc.elements("translatable").get(i);
@@ -1727,10 +1905,37 @@ public class Analyzer {
 	    		org.dom4j.Element segment = (org.dom4j.Element)translatable.elements("segment").get(j);
 	    		org.dom4j.Element source = segment.element("source");
 	    		org.dom4j.Element target = segment.element("target");
-	    		if ((source != null) && (!source.getTextTrim().equals("")) && (target != null) && (!target.getTextTrim().equals("")))
-	    		{
-	    			String matchscore = target.attributeValue("score");
-	    			results.put(source.getText(), new String[] { target.getText(), matchscore });
+	    		
+	    		String sourcetext = "";
+	    		if(source != null && !source.getTextTrim().equals("")){
+	    			sourcetext = source.getTextTrim();
+	    		}
+	    		String targettext = "";
+	    		if(target != null && !target.getTextTrim().equals("")){
+	    			targettext = target.getTextTrim();
+	    		}
+	    		String score = "0";
+	    		if(target != null && target.attribute("score") != null && !target.attribute("score").getValue().equals("0")){
+	    			score = target.attribute("score").getValue();
+	    		}
+	    		
+	    		if(sourcetext.equals("") && !targettext.equals("")){
+	    			results.put(NULL_SOURCE_REFERENCE_STR + " - " + no_source_index, new String[] { targettext, "0" });
+	    			no_source_index++;
+	    		}else if(!sourcetext.equals("") && targettext.equals("")){
+	    			if(!results.containsKey(sourcetext)){
+	    				results.put(sourcetext, new String[] { "", "0" });
+	    			}
+	    		}else if(!sourcetext.equals("") && !targettext.equals("")){
+	    			if(score.equals("0")){
+	    				if(!results.containsKey(sourcetext)){
+	    					results.put(sourcetext, new String[] { "", "0" });
+	    				}
+	    				results.put(NULL_SOURCE_REFERENCE_STR + " - " + no_source_index, new String[] { targettext, "0" });
+		    			no_source_index++;
+	    			}else{
+	    				results.put(sourcetext, new String[] { targettext, score });
+	    			}
 	    		}
 	    	}
 	    }
