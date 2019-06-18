@@ -88,9 +88,9 @@ public class XCompareRSTBatch {
 		}*/
 
 		
-		parameter = "N:\\j\\folders\\jx'\\XCompareRST\\file\\src\\src.txml*N:\\j\\folders\\jx'\\XCompareRST\\file\\ref\\ref.txml*N:\\j\\folders\\jx'\\XCompareRST\\file\\tref\\tref.docx*EN*ES-LA";
+		//parameter = "N:\\j\\folders\\jx'\\XCompareRST\\file\\src\\src.txml*N:\\j\\folders\\jx'\\XCompareRST\\file\\ref\\X-Compare_src_EN_ES-LA_[1557870285584].xlsx*N:\\j\\folders\\jx'\\XCompareRST\\file\\tref\\tref.docx*EN*ES-LA";
 		//parameter = "N:\\j\\folders\\jx'\\XCompareRST\\batch\\job1\\src\\ACT_ESES.xlsx.txml*N:\\j\\folders\\jx'\\XCompareRST\\batch\\job1\\ref\\REF_EN_ACT_DE.doc.txml|N:\\j\\folders\\jx'\\XCompareRST\\batch\\job1\\ref\\REF_EN_ACT_DE.doc.txml.doc.txml**EN-US*ES-ES";
-		configurationfile = "N:\\j\\folders\\jx'\\XCompareRST\\XCompare_config.ini";
+		//configurationfile = "N:\\j\\folders\\jx'\\XCompareRST\\XCompare_config.ini";
 		
 		ApplyAsposeLicenseToWord();
 		BasicConfigurator.configure();

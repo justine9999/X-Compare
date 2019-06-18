@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/mxiang/work/4022/64/lombok.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/lib/activation-1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/lib/antlrall-2.7.4.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/lib/apache-mime4j-core-0.7.2.jar"/>
@@ -122,5 +121,6 @@
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/lib/XmlSchema-1.4.7.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/lib/xz-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/AP4/lib/org.apache.xml.serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mxiang/work/lombok.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -166,7 +166,7 @@ public class FileUtils {
 	}
 	
 	@SuppressWarnings("rawtypes")
-	public static void populateReportNotesToNotes(String file, HashMap<String, String> notes, HashMap<String, String> conclusions) throws IOException {
+	public static void populateReportNotesToNotesAndAlignedTargets(String file, HashMap<String, String> notes, HashMap<String, String> conclusions, HashMap<String, String> alignedtargets, HashMap<String, String> scores, Configuration config) throws IOException {
 		
 		String ext = getExtension(new File(file).getName());
 		int idx = 0;
@@ -208,6 +208,24 @@ public class FileUtils {
 							comment.setText("Source revision");
 							break;
 					}
+				}
+				
+				if(config.isAutoalign_previous_translation()){
+					if(segment.attribute("modified") != null){
+						segment.remove(segment.attribute("modified"));
+					}
+					Element target = (Element)segment.element("target");
+					if(target != null){
+						segment.remove(target);
+					}
+					target = segment.addElement("target");
+
+					int score = scores.get(Integer.toString(idx)).equals("100-")?100:Integer.parseInt(scores.get(Integer.toString(idx)));
+					target.addAttribute("score", Integer.toString(score));
+					if(score >= config.getThreshold_noraml()){
+						target.addAttribute("secondary", "true");
+					}
+					target.setText(alignedtargets.get(Integer.toString(idx)));
 				}
 			}
 
@@ -286,7 +304,6 @@ public class FileUtils {
 				if(scores[i] >= config.getThreshold_noraml()){
 					target.addAttribute("secondary", "true");
 				}
-				
 				target.setText(targets[i]);
 			}
 

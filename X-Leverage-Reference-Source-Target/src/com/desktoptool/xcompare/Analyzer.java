@@ -136,7 +136,7 @@ public class Analyzer {
 			Worksheet sheet = workbook.getWorksheets().add(tabName);
 			sheet.setZoom(75);
 			
-			String orphanTabName = "Tab - " + index + " - orphan";
+			String orphanTabName = "Tab - " + index + " - unmatched";
 			Worksheet sheet_orphan = workbook.getWorksheets().add(orphanTabName);
 			
 			analyze_internal(sourcefile, source_reference_xsegments, target_reference_xsegments, sheet, sheet_orphan, sourcelanguage, targetlanguage, align_results, index);
@@ -237,6 +237,7 @@ public class Analyzer {
 			CellArea cellarea = (CellArea)ocellarea;
 			ccells.get(cellarea.StartRow, cellarea.StartColumn).getMergedRange().unMerge();
 		}
+		
 		for(int c = 0; c <= 6; c++){	
 			for(int r = 0; r <= ocells.getMaxRow(); r++){
 				Cell ccell = ccells.get(r, c);
@@ -250,10 +251,53 @@ public class Analyzer {
 			}
 		}
 		
+		
+		if(config.isAutoalign_previous_translation()){
+			
+			Cells ocells_orphan = ow.getWorksheets().get(2).getCells();
+			Cells ccells_orphan = cw.getWorksheets().get(2).getCells();
+			ccells_orphan.clearContents(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
+			ccells_orphan.clearFormats(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
+			ccells_orphan.clearRange(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
+			for(int c = 0; c <= 3; c++){
+				for(int r = 0; r <= ocells_orphan.getMaxRow(); r++){
+					Cell ccell_orphan = ccells_orphan.get(r, c);
+					Cell ocell_orphan = ocells_orphan.get(r, c);
+					if(c <= 1){
+						ccell_orphan.setValue(ocell_orphan.getValue());
+					}else{
+						ccell_orphan.setFormula(ocell_orphan.getFormula());
+					}
+					
+					ccell_orphan.setStyle(ocell_orphan.getStyle());
+				}
+			}
+		}
+		
+		if(config.isAutoalign_previous_translation()){
+			
+			for(int c = 7; c <= 12; c++){	
+				for(int r = 0; r <= ocells.getMaxRow(); r++){
+					Cell ccell = ccells.get(r, c);
+					Cell ocell = ocells.get(r, c);
+					if(r > 0 && c == 7){
+						ccell.setFormula(ocell.getFormula());
+					}else{
+						ccell.setValue(ocell.getValue());
+					}
+					ccell.setStyle(ocell.getStyle());
+				}
+			}
+			
+			cw.calculateFormula();
+		}
+		
 		//source col 1, target col 7
 		int start = 1;
 		HashMap<String, String> notes = new HashMap<String, String>();
 		HashMap<String, String> conclusions = new HashMap<String, String>();
+		HashMap<String, String> alignedtargets = new HashMap<String, String>();
+		HashMap<String, String> scores = new HashMap<String, String>();
 		
 		while(true){
 			
@@ -277,9 +321,15 @@ public class Analyzer {
 			
 			recreateTracksAndScores(start, oidx, ccells, 1, sourcelanguage);
 			recreateTracksAndScores(start, cidx, ccells, 7, targetlanguage);
+			
+			if(config.isAutoalign_previous_translation()){
+				String targetstringval = ccells.get(start, 7).getDisplayStringValue();
+				alignedtargets.put(segid, targetstringval.equals("#N/A")?"":targetstringval.split(" - ")[0]);
+				scores.put(segid, ccells.get(start, 4).getDisplayStringValue().trim());
+			}
 						
 			deleteEmptyRange(oidx+1, ccells, 1, 0, 6);
-			boolean hasTarget = !ccells.get(start, 7).getDisplayStringValue().trim().equals("");
+			boolean hasTarget = !ccells.get(start, 7).getDisplayStringValue().trim().equals("") || !ccells.get(start, 7).getFormula().trim().equals("");
 			if(hasTarget){
 				deleteEmptyRange(cidx+1, ccells, 7, 7, 12);
 			}
@@ -317,46 +367,18 @@ public class Analyzer {
 		}
 		
 		if(config.isAutoalign_previous_translation()){
-			
-			Cells ocells_orphan = ow.getWorksheets().get(2).getCells();
-			Cells ccells_orphan = cw.getWorksheets().get(2).getCells();
-			if(config.isAutoalign_previous_translation()){
-				ccells_orphan.clearContents(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
-				ccells_orphan.clearFormats(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
-				ccells_orphan.clearRange(0, 0, ccells_orphan.getMaxRow(), ccells_orphan.getMaxColumn());
-				for(int c = 0; c <= 3; c++){
-					for(int r = 0; r <= ocells_orphan.getMaxRow(); r++){
-						Cell ccell_orphan = ccells_orphan.get(r, c);
-						Cell ocell_orphan = ocells_orphan.get(r, c);
-						ccell_orphan.setValue(ocell_orphan.getValue());
-						ccell_orphan.setStyle(ocell_orphan.getStyle());
-					}
-				}
-			}
-			
-			for(int c = 7; c <= 12; c++){	
-				for(int r = 0; r <= ocells.getMaxRow(); r++){
-					Cell ccell = ccells.get(r, c);
-					Cell ocell = ocells.get(r, c);
-					if(r > 0 && c == 7){
-						ccell.setFormula(ocell.getFormula());
-					}else{
-						ccell.setValue(ocell.getValue());
-					}
-					ccell.setStyle(ocell.getStyle());
-				}
-			}
+			cw.getWorksheets().get(2).getAutoFilter().setRange("A1:D1");
 		}
 		
 		cw.save(newreport);
 		
-		FileUtils.populateReportNotesToNotes(populatedfile, notes, conclusions);
+		FileUtils.populateReportNotesToNotesAndAlignedTargets(populatedfile, notes, conclusions, alignedtargets, scores, config);
 	}
 	
 	private int getEndOfSource(int start, Cells cells, int col){
 		
-		while ((cells.get(start + 1, col).getStringValue().equals("")) && 
-			      (!cells.get(start + 1, col + 1).getStringValue().equals(""))) {
+		while ((cells.get(start + 1, col).getStringValue().trim().equals("")) && 
+			      (!cells.get(start + 1, col + 1).getStringValue().trim().equals(""))) {
 			      start++;
 			}
 		return start;
@@ -365,14 +387,14 @@ public class Analyzer {
 	private void shiftRange(Cells cells, int startrow, int src_col) throws Exception{
 		
 		int endrow = startrow;
-		while(cells.get(endrow + 1, src_col).getStringValue().equals("")
-				&& !cells.get(endrow + 1, src_col+3).getStringValue().equals("")){
+		while(cells.get(endrow + 1, src_col).getStringValue().trim().equals("")
+				&& !cells.get(endrow + 1, src_col+3).getStringValue().trim().equals("")){
 			endrow++;
 		}
 		int head = startrow;
 		int i = startrow;
 		while(i <= endrow){
-			if(!cells.get(i, src_col+1).getStringValue().equals("")){
+			if(!cells.get(i, src_col+1).getStringValue().trim().equals("")){
 				
 				cells.get(head, src_col+1).setValue(cells.get(i, src_col+1).getStringValue());
 				cells.get(head, src_col+2).setHtmlString(cells.get(i, src_col+2).getHtmlString());
@@ -393,9 +415,9 @@ public class Analyzer {
 	
 	private void deleteEmptyRange(int idx, Cells cells, int checkcol, int startcol, int endcol){
 		
-	    while((cells.get(idx, checkcol).getStringValue().equals("")) && 
-	    		(cells.get(idx, checkcol + 1).getStringValue().equals("")) && 
-	    			(!cells.get(idx, checkcol + 3).getStringValue().equals(""))){
+	    while(idx < cells.getMaxRow() && (cells.get(idx, checkcol).getStringValue().trim().equals("")) && 
+	    		(cells.get(idx, checkcol).getFormula() == null || cells.get(idx, checkcol).getFormula().trim().equals("")) &&
+	    			(cells.get(idx, checkcol + 1).getStringValue().trim().equals(""))){
 	    	
 	      cells.deleteRange(idx, startcol, idx, endcol, ShiftType.UP);
 	    }
