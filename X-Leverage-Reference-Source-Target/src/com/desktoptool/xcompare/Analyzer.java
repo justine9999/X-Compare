@@ -201,25 +201,6 @@ public class Analyzer {
 		//System.out.println("count: " + this.count);
 	}
 	
-	private void createTM(String sourcefile, String sourcelanguage, String targetlanguage) throws IOException{		
-		
-		String copy = sourcefile + "-copy";
-		org.apache.commons.io.FileUtils.copyFile(new File(sourcefile), new File(copy));
-		
-		List<String> files = new ArrayList<>();
-		files.add(copy);
-		
-		FileUtils.populateTargetsByNotes(copy);
-				
-		String tmpath = sourcefile + ".txt";
-		makeDummyTM(tmpath, sourcelanguage, targetlanguage);
-		updateTM(tmpath, files);
-		new File(copy).delete();
-		org.apache.commons.io.FileUtils.forceDelete(new File(sourcefile + ".bak"));
-		org.apache.commons.io.FileUtils.forceDelete(new File(sourcefile + ".jtx"));
-		org.apache.commons.io.FileUtils.forceDelete(new File(sourcefile + ".lock"));
-	}
-	
 	private void populateOriginalReportToNewReportAndSourceFile(String orgreport, String newreport, String populatedfile, String sourcelanguage, String targetlanguage) throws Exception{
 		
 		Workbook ow = new Workbook(orgreport);
@@ -1657,7 +1638,6 @@ public class Analyzer {
 	private double[] getMatchScore(String str1, String str2, Integer s1, Integer e1, Integer s2, Integer e2, String language){
 		
 		//this.count++;
-		
 		s1 = s1==null?0:s1;
 		e1 = e1==null?(str1.length()-1):e1;
 		s2 = s2==null?0:s2;
@@ -1667,8 +1647,8 @@ public class Analyzer {
 		
 		String regex_1, regex_2;
 		if(s2 == -1 || e2 == -1) System.out.println("\"" + str1 + "\"" + "\"" + str2 + "\"");
-		str1 = str1.substring(s1, e1);
-		str2 = str2.substring(s2, e2);
+		str1 = str1.substring(s1, e1+1);
+		str2 = str2.substring(s2, e2+1);
 		//if is character based language, use character level match, otherwise use word level match
 		if(Locale.makeLocale(language).isFarEast()){
 			regex_1 = Pattern.quote(str2);
