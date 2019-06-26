@@ -122,5 +122,7 @@
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/lib/xz-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Analysis Package/AP4/lib/org.apache.xml.serializer-2.7.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/mxiang/work/lombok.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mxiang/work/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mxiang/work/junit-4.13-beta-3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
