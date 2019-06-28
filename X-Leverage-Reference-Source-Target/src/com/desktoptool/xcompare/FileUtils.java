@@ -224,6 +224,8 @@ public class FileUtils {
 						target.addAttribute("secondary", "true");
 					}
 					target.setText(alignedtargets.get(Integer.toString(idx)));
+					
+					adddLeadingAndTrailingTags(segment.element("source"), target);
 				}
 			}
 
@@ -303,12 +305,55 @@ public class FileUtils {
 					target.addAttribute("secondary", "true");
 				}
 				target.setText(targets[i]);
+				
+				adddLeadingAndTrailingTags(segment.element("source"), target);
 			}
 
 			OutputStreamWriter writer = new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(file)), "UTF8");
 		    document.write(writer);
 		    writer.close();
 		}
+	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private static void adddLeadingAndTrailingTags(Element source, Element target){
+		
+		//check if there is tag in the middle
+		boolean hastext = false;
+		for(int i = 0; i < source.content().size(); i++){
+			org.dom4j.Node node = (org.dom4j.Node)source.content().get(i);
+			if(node.getNodeType() == org.dom4j.Node.TEXT_NODE){
+				if(i > 0 && ((org.dom4j.Node)source.content().get(i-1)).getNodeType() == org.dom4j.Node.ELEMENT_NODE && hastext){
+					return;
+				}
+				hastext = true;
+			}
+		}
+		
+		//if not...
+		List<org.dom4j.Node> sourcetags_leading = new ArrayList<org.dom4j.Node>();
+		List<org.dom4j.Node> sourcetags_trailing = new ArrayList<org.dom4j.Node>();
+		
+		List trg_contents = target.content();
+		int i = 0;
+		while(((org.dom4j.Node)source.content().get(i)).getNodeType() == org.dom4j.Node.ELEMENT_NODE){
+			org.dom4j.Node node = (org.dom4j.Node)source.content().get(i);
+			sourcetags_leading.add(0, node);
+			i++;
+		}
+		i = source.content().size()-1;
+		while(((org.dom4j.Node)source.content().get(i)).getNodeType() == org.dom4j.Node.ELEMENT_NODE){
+			org.dom4j.Node node = (org.dom4j.Node)source.content().get(i);
+			sourcetags_trailing.add(0, node);
+			i--;
+		}
+		for(org.dom4j.Node node : sourcetags_leading){
+			trg_contents.add(0, node);
+		}
+		for(org.dom4j.Node node : sourcetags_trailing){
+			trg_contents.add(node);
+		}
+		target.setContent(trg_contents);
 	}
 	
 	public static List<File> convertSourceFilesToTxmls(List<File> sources, String configfiledir, String sourcelanguage, String tempfolder, StringBuffer sb) throws Exception{

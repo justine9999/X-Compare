@@ -40,6 +40,7 @@ import com.aspose.cells.Comment;
 import com.aspose.cells.FormatConditionCollection;
 import com.aspose.cells.FormatConditionType;
 import com.aspose.cells.OperatorType;
+import com.aspose.cells.ProtectionType;
 import com.aspose.cells.Range;
 import com.aspose.cells.ShiftType;
 import com.aspose.cells.Style;
@@ -64,9 +65,14 @@ public class Analyzer {
 	private StringBuffer sb;
 	private int sourcefilecount;
 	boolean isRunAgainstTargetReference = false;
+	private String targetReport;
 	
 	private static String NULL_SOURCE_REFERENCE_STR = "X_COMPARE_NULL_SOURCE_REFERENCE_STR";
 	//int count = 0;
+	
+	public String getTargetReport(){
+		return this.targetReport;
+	}
 	
 	public Analyzer(com.desktoptool.xcompare.Configuration config, int jobid, List<String> progresses, StringBuffer sb) {
 		
@@ -141,6 +147,7 @@ public class Analyzer {
 			
 			analyze_internal(sourcefile, source_reference_xsegments, target_reference_xsegments, sheet, sheet_orphan, sourcelanguage, targetlanguage, align_results, index);
 			
+			sheet.protect(ProtectionType.ALL, null, null);
 			index++;
 		}
 		
@@ -183,6 +190,7 @@ public class Analyzer {
 		
 		String finalreport = outputDirectory + File.separator + "X-Compare_" + FileUtils.getNameWithoutExtension(sourcefiles.get(0)) + "_" + languagePairCode.toUpperCase() + "_[" + System.currentTimeMillis()  + "]" + ".xlsx";
 		workbook.save(finalreport);
+		this.targetReport = finalreport;
 		
 		if(source_reference_xsegments.size() == 0){
 			String previousrerpot = sourceReferencefiles.get(0);
@@ -306,7 +314,12 @@ public class Analyzer {
 			if(config.isAutoalign_previous_translation()){
 				String targetstringval = ccells.get(start, 7).getDisplayStringValue();
 				alignedtargets.put(segid, targetstringval.equals("#N/A")?"":targetstringval.split(" - ")[0]);
-				scores.put(segid, ccells.get(start, 4).getDisplayStringValue().trim());
+				int alignedscore = targetstringval.equals("#N/A")?0:Integer.parseInt(targetstringval.split(" - ")[1]);
+				String score_text = ccells.get(start, 4).getDisplayStringValue().trim();
+				int matchscore = score_text.equals("100-")?75:Integer.parseInt(score_text);
+				matchscore = matchscore == 100?99:75;
+				int finalscore = alignedscore == 0?0:matchscore;
+				scores.put(segid, Integer.toString(finalscore));
 			}
 						
 			deleteEmptyRange(oidx+1, ccells, 1, 0, 6);
@@ -592,7 +605,6 @@ public class Analyzer {
 			//write source comparison into excel
 			String aligned_trg_text = "";
 			int align_score = 0;
-			int autoaligner_confidence_score = 0;
 			if(src_ref_map.size() > 0 && isComparable(source_xsegment.getNormalized_content())){
 				
 				cells.get(cell_start_index, 0).setValue(Integer.parseInt(source_xsegment.getSegment_id()));
@@ -629,15 +641,15 @@ public class Analyzer {
 					
 					//get highest match from aligned target reference text
 					if(align_results.containsKey(ref_text)){
-						int source_match_score = score_text.equals("100-")?100:Integer.parseInt(score_text);
-						int score_cur = Integer.parseInt(align_results.get(ref_text)[1]);
-						//int final_score = score_cur * source_match_score / 100;
-						int final_score = source_match_score;
+						int source_match_score = score_text.equals("100-")?75:Integer.parseInt(score_text);
+						source_match_score = source_match_score == 100?99:75;
+						int autoaligner_confidence_score = Integer.parseInt(align_results.get(ref_text)[1]);
+						//int final_score = autoaligner_confidence_score * source_match_score / 100;
+						int final_score = autoaligner_confidence_score == 0?0:source_match_score;
 						if(final_score > align_score && final_score >= config.getThreshold_noraml()){
 							align_score = final_score;
 							used_ref_text = ref_text;
 							aligned_trg_text = align_results.get(ref_text)[0];
-							autoaligner_confidence_score = score_cur;
 						}
 					}
 				}
@@ -1268,6 +1280,7 @@ public class Analyzer {
    		range = cells.createRange(1,2,cell_start_index-1,1);
 		range.setColumnWidth(50.0D);
    		style = wb.createStyle();
+   		style.setLocked(false);
    		style.setTextWrapped(true);
    		style.setHorizontalAlignment(TextAlignmentType.LEFT);
    		style.setIndentLevel(1);
@@ -1304,6 +1317,7 @@ public class Analyzer {
    		range = cells.createRange(1,3,cell_start_index-1,1);
 		range.setColumnWidth(50.0D);
    		style = wb.createStyle();
+   		style.setLocked(false);
    		style.setTextWrapped(true);
    		style.setHorizontalAlignment(TextAlignmentType.LEFT);
    		style.setIndentLevel(1);
@@ -1319,6 +1333,7 @@ public class Analyzer {
    		styleFlag.setVerticalAlignment(true);
    		styleFlag.setIndent(true);
    		styleFlag.setBorders(true);
+   		styleFlag.setLocked(true);
    		//styleFlag.setAll(true);
    		range.applyStyle(style, styleFlag);
    		
@@ -1363,6 +1378,7 @@ public class Analyzer {
    		range = cells.createRange(1,5,cell_start_index-1,1);
 		range.setColumnWidth(30.0D);
    		style = wb.createStyle();
+   		style.setLocked(false);
    		style.setTextWrapped(true);
    		style.setHorizontalAlignment(TextAlignmentType.LEFT);
    		style.setIndentLevel(1);
@@ -1474,6 +1490,7 @@ public class Analyzer {
    		range = cells.createRange(1,8,cell_start_index-1,1);
 		range.setColumnWidth(50.0D);
    		style = wb.createStyle();
+   		style.setLocked(false);
    		style.setTextWrapped(true);
    		style.setHorizontalAlignment(TextAlignmentType.LEFT);
    		style.setIndentLevel(1);
@@ -1515,6 +1532,7 @@ public class Analyzer {
    		range = cells.createRange(1,9,cell_start_index-1,1);
 		range.setColumnWidth(50.0D);
    		style = wb.createStyle();
+   		style.setLocked(false);
    		style.setTextWrapped(true);
    		style.setHorizontalAlignment(TextAlignmentType.LEFT);
    		style.setIndentLevel(1);
@@ -1569,6 +1587,7 @@ public class Analyzer {
    		range = cells.createRange(1,11,cell_start_index-1,1);
 		range.setColumnWidth(30.0D);
    		style = wb.createStyle();
+   		style.setLocked(false);
    		style.setTextWrapped(true);
    		style.setHorizontalAlignment(TextAlignmentType.LEFT);
    		style.setIndentLevel(1);

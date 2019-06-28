@@ -51,6 +51,10 @@ public class Configuration {
 		this.threshold_partialmatch = 50;
 	}
 	
+	public String getConfigurationFile(){
+		return this.configurationfile;
+	}
+	
 	public void loadConfiguration(String configurationFile) throws IOException {
 		
 		this.configurationfile = configurationFile;
