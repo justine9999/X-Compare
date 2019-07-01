@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<txml locale="ES" version="1.0" segtype="sentence" targetEncoding="UTF-8" options="eol=unix;" createdby="WF3.4.14" datatype="regexp" targetlocale="DE-DE" editedby="WF3.4.14" numberExtraction="false" file_extension="html">
+<skeleton>&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="1" datatype="html"><segment segmentId="1">
+<source>Aviso sobre privacidad</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="2" datatype="html"><segment segmentId="1">
+<source>Fecha de entrada en vigor:</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>7 de diciembre de 2018.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="3" datatype="html"><segment segmentId="1">
+<source>En este Aviso sobre privacidad se describen las prácticas de privacidad de Vertex Pharmaceuticals Incorporated y sus subsidiarias y filiales, incluidas, entre otras, las entidades enumeradas <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="#14"&gt;</ut>aquí<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut> (conjuntamente, “Vertex”).</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>En este Aviso sobre privacidad se describe cómo recopilamos, utilizamos, divulgamos y procesamos información personal, y se explican los derechos y opciones disponibles para las personas con respecto a esta información.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="4" datatype="html"><segment segmentId="1">
+<source>Vertex puede proporcionar avisos sobre privacidad adicionales a las personas en el momento de recopilar sus datos.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Por ejemplo, proporcionamos un aviso sobre privacidad específico a los participantes de ensayos clínicos en los que se describen nuestras prácticas de privacidad en relación con la realización de ensayos clínicos.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Este tipo de aviso “en el momento” regirá cómo podremos procesar la información que proporcione en ese momento.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="5" datatype="html"><segment segmentId="1">
+<source>Tenga en cuenta que este Aviso sobre privacidad no se aplica al procesamiento que realiza Vertex de los datos de empleados o contratistas.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="6" datatype="html"><segment segmentId="1">
+<source>AL PROPORCIONAR SU INFORMACIÓN PERSONAL A VERTEX O UTILIZAR NUESTROS SITIOS WEB O APLICACIONES, DA SU CONSENTIMIENTO A NUESTRA RECOPILACIÓN, USO O DIVULGACIÓN DE DICHA INFORMACIÓN PARA LOS FINES ESPECIFICADOS O LAS CONDICIONES DE ESTE AVISO SOBRE PRIVACIDAD.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="7" datatype="html"><segment segmentId="1">
+<source>Haga clic en los enlaces siguientes para ir a las secciones del Aviso sobre privacidad:</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="8" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#1"&gt;</ut>Información personal que recopilamos<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>
+
+	&lt;ul class="rteindent1" style="list-style-type:circle;"&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="9" datatype="html"><segment segmentId="1">
+<source>De quién recopilamos información personal</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="10" datatype="html"><segment segmentId="1">
+<source>Cómo recopilamos información personal</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="11" datatype="html"><segment segmentId="1">
+<source>Tipos de información personal que recopilamos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="12" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#2"&gt;</ut>Nuestro uso de la información personal<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="13" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#3"&gt;</ut>Información personal que compartimos<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="14" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="#4"&gt;</ut><ut x="3" type="bold">&lt;strong&gt;</ut>Cookies y demás información recopilada por medios automatizados<ut x="4" type="unknown">&lt;/strong&gt;</ut><ut x="5" type="unknown">&lt;/a&gt;</ut><ut x="6" type="unknown">&lt;/u&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="15" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#8"&gt;</ut>Información para personas del Espacio Económico Europeo y el Reino Unido<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>
+	&lt;ul class="rteindent1" style="list-style-type:circle;"&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="16" datatype="html"><segment segmentId="1">
+<source>Bases legales del procesamiento de información personal</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="17" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#7"&gt;</ut>Transferencia internacional de datos<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="18" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="link">&lt;a href="#5"&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="bold">&lt;strong&gt;</ut>Opciones en línea<ut x="4" type="unknown">&lt;/strong&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/a&gt;</ut></source>
+</segment></translatable>
+<skeleton>
+	&lt;ul class="rteindent1" style="list-style-type:circle;"&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="19" datatype="html"><segment segmentId="1">
+<source>Redes publicitarias</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="20" datatype="html"><segment segmentId="1">
+<source>Correos electrónicos de marketing</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="21" datatype="html"><segment segmentId="1">
+<source>Preferencias y derechos de privacidad</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="22" datatype="html"><segment segmentId="1">
+<source>Profesionales sanitarios</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="23" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#6"&gt;</ut>Retención de datos<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="24" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#9"&gt;</ut>Cómo protegemos la información personal<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="25" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#10"&gt;</ut>Enlaces a sitios web y contenido de terceros<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="26" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#11"&gt;</ut>Actualizaciones de nuestro Aviso sobre privacidad<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="27" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut><ut x="3" type="link">&lt;a href="#12"&gt;</ut>Cómo contactar con nosotros<ut x="4" type="unknown">&lt;/a&gt;</ut><ut x="5" type="unknown">&lt;/u&gt;</ut><ut x="6" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a id="1" name="1"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="28" datatype="html"><segment segmentId="1">
+<source>Información personal que recopilamos</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p align="left"&gt;</skeleton>
+<translatable blockId="29" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>De quién recopilamos información personal<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p align="left"&gt;</skeleton>
+<translatable blockId="30" datatype="html"><segment segmentId="1">
+<source>Recopilamos información personal de los siguientes tipos de personas: participantes de ensayos clínicos, pacientes, familiares de los pacientes, cuidadores o defensores, médicos y otros profesionales sanitarios, investigadores médicos, investigadores, farmacéuticos, contratistas, consultores, solicitantes de empleo, voluntarios y otras personas que interactúan directamente con Vertex o sus proveedores de servicios o socios comerciales, incluidos usuarios de sitios web y aplicaciones móviles.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="31" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Cómo recopilamos información personal<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="32" datatype="html"><segment segmentId="1">
+<source>Recopilamos información personal:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="33" datatype="html"><segment segmentId="1">
+<source>Directamente de las personas</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="34" datatype="html"><segment segmentId="1">
+<source>A través de nuestros sitios web y aplicaciones móviles</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="35" datatype="html"><segment segmentId="1">
+<source>De profesionales sanitarios</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="36" datatype="html"><segment segmentId="1">
+<source>De organizaciones de investigación por contrato e investigadores médicos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="37" datatype="html"><segment segmentId="1">
+<source>De agencias gubernamentales o registros públicos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="38" datatype="html"><segment segmentId="1">
+<source>De proveedores de servicios de terceros, agentes de datos o socios comerciales</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="39" datatype="html"><segment segmentId="1">
+<source>De grupos y asociaciones sectoriales y de pacientes</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="40" datatype="html"><segment segmentId="1">
+<source>De redes sociales u otros foros públicos (incluida información de acontecimientos adversos o quejas de calidad de producto)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="41" datatype="html"><segment segmentId="1">
+<source>De reclutadores</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="42" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Tipos de información personal que recopilamos<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="43" datatype="html"><segment segmentId="1">
+<source>Los tipos de información personal que recopilamos y compartimos dependen de la naturaleza de la relación que tiene con Vertex y las disposiciones de las leyes aplicables.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Los tipos de información personal que recopilamos incluyen:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="44" datatype="html"><segment segmentId="1">
+<source>Información sanitaria y médica (como datos de seguro médico, información sobre diagnósticos y condiciones físicas y de salud mental, tratamientos médicos, información genética, antecedentes médicos familiares y medicamentos que puede estar tomando una persona, incluidos posología, duración y frecuencia) que recopilamos en relación con la gestión de ensayos clínicos, la realización de investigaciones, la provisión de programas de apoyo a pacientes, la distribución y el mercadeo de nuestros productos, la gestión de programas de uso compasivo y acceso ampliado, así como el seguimiento de informes de acontecimientos adversos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="45" datatype="html"><segment segmentId="1">
+<source>Información y preferencias de contacto personal y empresarial (como nombre, puesto de trabajo y nombre del empleador, dirección de correo electrónico, dirección postal, número de teléfono e información de contacto de emergencia)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="46" datatype="html"><segment segmentId="1">
+<source>Información biográfica y demográfica (como fecha de nacimiento, edad, sexo, estado civil e información con respecto a padres o tutores legales)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="47" datatype="html"><segment segmentId="1">
+<source>Credenciales profesionales, historial académico y profesional, afiliaciones institucionales, verificaciones de antecedentes, evaluaciones de desempeño, evaluaciones de aptitudes y de personalidad, así como información del tipo incluido en un historial académico y laboral de un curriculum vitae (como experiencia laboral, educación, salario e idiomas hablados)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="48" datatype="html"><segment segmentId="1">
+<source>Información relacionada con los pagos que tenemos que realizar por servicios profesionales, como consultoría, que las personas nos pueden hacer (como número de identificación fiscal e información de cuentas financieras)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="49" datatype="html"><segment segmentId="1">
+<source>Si es un profesional sanitario, recopilamos información sobre los programas y actividades en los que ha participado, su prescripción de nuestros productos y los acuerdos que ha tenido con nosotros</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="50" datatype="html"><segment segmentId="1">
+<source>Nombre de usuario y contraseña que puede seleccionar en relación con el establecimiento de una cuenta en nuestro sitio web o aplicación móvil</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="51" datatype="html"><segment segmentId="1">
+<source>Su fotografía, nombre de usuario de redes sociales o firma digital o electrónica</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="52" datatype="html"><segment segmentId="1">
+<source>Información públicamente disponible (como comentarios que describan respaldo y experiencia con productos de Vertex)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="53" datatype="html"><segment segmentId="1">
+<source>Otra información que nos proporcione (como en correos electrónicos, en llamadas telefónicas, a través de nuestros sitios web o aplicaciones para dispositivos móviles, o en otra correspondencia, como estudios de mercado, con Vertex o sus proveedores de servicios o socios comerciales)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a id="2" name="2"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="54" datatype="html"><segment segmentId="1">
+<source>Nuestro uso de la información personal</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="55" datatype="html"><segment segmentId="1">
+<source>Podemos utilizar la información personal para los siguientes fines, siempre que dicho uso esté permitido por las leyes locales:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="56" datatype="html"><segment segmentId="1">
+<source>Comunicación sobre los productos o servicios que ofrecemos, y respuesta a solicitudes, consultas, comentarios y sugerencias</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="57" datatype="html"><segment segmentId="1">
+<source>Análisis y mejora de nuestras comunicaciones y estrategias (incluida la identificación de cuándo los correos electrónicos que se le han enviado se han recibido y leído, así como las interacciones con nuestros sitios web y aplicaciones para dispositivos móviles)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="58" datatype="html"><segment segmentId="1">
+<source>Funcionamiento, evaluación, seguridad y mejora de nuestro negocio (incluidas las ubicaciones de nuestras oficinas), nuestros sitios web y aplicaciones móviles, así como otros productos y servicios que ofrecemos (incluido investigar y desarrollar nuevos productos y servicios)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="59" datatype="html"><segment segmentId="1">
+<source>Adaptación del contenido que mostramos en nuestras comunicaciones, en nuestros sitios web y en aplicaciones móviles</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="60" datatype="html"><segment segmentId="1">
+<source>Desarrollo y ejecución de programas de ventas y marketing, incluida la entrega de programas y materiales</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="61" datatype="html"><segment segmentId="1">
+<source>Administración de encuestas y otros estudios de mercado</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="62" datatype="html"><segment segmentId="1">
+<source>Dotación de personal, facilitación y gestión de ensayos clínicos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="63" datatype="html"><segment segmentId="1">
+<source>Seguimiento y respuesta a cuestiones de seguridad y calidad de productos (incluidas retiradas de productos)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="64" datatype="html"><segment segmentId="1">
+<source>Cumplimiento de obligaciones reglamentarias de control e informe (incluidas las relacionadas con acontecimientos adversos, quejas de productos, transparencia de los gastos y seguridad de pacientes)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="65" datatype="html"><segment segmentId="1">
+<source>Análisis de uso de nuestros productos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="66" datatype="html"><segment segmentId="1">
+<source>Respaldo y facilitación de iniciativas sanitarias públicas, simposios, conferencias y eventos científicos, educativos, comunitarios y voluntarios, incluidos los realizados en las oficinas de Vertex</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="67" datatype="html"><segment segmentId="1">
+<source>Facilitación de programas de cumplimiento con la medicación</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="68" datatype="html"><segment segmentId="1">
+<source>Gestión de acceso a nuestros productos, incluido donde el acceso está limitado por ley a médicos con licencia</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="69" datatype="html"><segment segmentId="1">
+<source>Realización y gestión de ensayos clínicos y facilitación de investigaciones y estudios académicos y de otro tipo</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="70" datatype="html"><segment segmentId="1">
+<source>Pago de servicios que los médicos, investigadores y otras personas pueden proporcionarnos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="71" datatype="html"><segment segmentId="1">
+<source>Definición y gestión de actividades adecuadas de participación de pacientes y programas de apoyo a pacientes (incluido proporcionar un copago y otra ayuda financiera, si está disponible)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="72" datatype="html"><segment segmentId="1">
+<source>Identificación y empleo a través de líderes y expertos externos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="73" datatype="html"><segment segmentId="1">
+<source>Concesión de becas académicas y subvenciones</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="74" datatype="html"><segment segmentId="1">
+<source>Atribución de autoría a materiales académicos y promocionales</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="75" datatype="html"><segment segmentId="1">
+<source>Cumplimiento de disposiciones legales o reglamentarias, proceso judicial y políticas de nuestra empresa</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="76" datatype="html"><segment segmentId="1">
+<source>Protección, identificación, investigación y respuesta ante fraude, actividad ilegal (como incidentes de piratería informática o uso indebido de nuestros sitios web y aplicaciones móviles), así como reclamaciones y otras responsabilidades, incluida la ejecución de los términos y condiciones que rigen los servicios que proporcionamos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="77" datatype="html"><segment segmentId="1">
+<source>Facilitación de nuestras actividades de reclutamiento (como procesamiento de solicitudes de empleo, evaluación de un candidato para una actividad laboral y control de estadísticas de reclutamiento)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="78" datatype="html"><segment segmentId="1">
+<source>Podemos agregar y/o desidentificar cualquier información que recopilemos, en caso de que dicha información ya no identifique a ninguna persona concreta.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Podemos utilizar, divulgar y procesar dicha información para nuestros fines comerciales legítimos (incluidos el análisis histórico y estadístico y la planificación comercial) sin restricciones.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="79" datatype="html"><segment segmentId="1">
+<source>En algunas situaciones, podemos tener un acuerdo o relación independiente con usted con respecto a un tipo concreto de procesamiento de sus datos, por ejemplo, si participa en un programa, actividad, evento o ensayo clínico espacial.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Estas situaciones se regirán por condiciones, avisos sobre privacidad o formularios de consentimiento específicos que proporcionen información adicional sobre cómo utilizaremos su información.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Respetaremos estas condiciones adicionales con respecto a su información y, por lo tanto, le recomendamos encarecidamente que revise las condiciones adicionales antes de participar en cualquier programa.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="3" name="3"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="80" datatype="html"><segment segmentId="1">
+<source>Información personal que compartimos</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="81" datatype="html"><segment segmentId="1">
+<source>Vertex comparte información personal para los fines descritos en este Aviso sobre privacidad o a través de un aviso de privacidad “en el momento” específico proporcionado en el momento de recopilar la información.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="82" datatype="html"><segment segmentId="1">
+<source>Los tipos de personas o entidades con las que compartimos información personal incluyen:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="83" datatype="html"><segment segmentId="1">
+<source>Filiares o subsidiarias de Vertex</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="84" datatype="html"><segment segmentId="1">
+<source>Proveedores de servicios que realizan servicios en nuestro nombre, que incluyen:</source>
+</segment></translatable>
+<skeleton>
+	&lt;ul class="rteindent1" style="list-style-type:circle;"&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="85" datatype="html"><segment segmentId="1">
+<source>Organizaciones de investigación por contrato que realizan ensayos clínicos en nuestro nombre</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="86" datatype="html"><segment segmentId="1">
+<source>Proveedores de almacenamiento y análisis de datos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="87" datatype="html"><segment segmentId="1">
+<source>Proveedores de atención al cliente (incluida nuestra línea de información médica) y de apoyo a pacientes (que incluyen para informes de calidad de productos y acontecimientos adversos, ayuda de copago de pacientes, programas de cumplimiento de toma de medicamentos, etc.)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="88" datatype="html"><segment segmentId="1">
+<source>Proveedores de servicio de retirada de productos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="89" datatype="html"><segment segmentId="1">
+<source>Proveedores de tecnología (incluidos asistencia técnica, proveedores de correo electrónico y alojamiento web, proveedores de tecnología de marketing y publicidad, proveedores de comunicaciones por correo electrónico y texto, desarrolladores de aplicaciones móviles)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="90" datatype="html"><segment segmentId="1">
+<source>Organizaciones de planificación de eventos y de viajes que ayuden a facilitar los programas de Vertex</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="91" datatype="html"><segment segmentId="1">
+<source>Proveedores de servicios de pago, envío y cumplimiento</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="92" datatype="html"><segment segmentId="1">
+<source>Reguladores de todo el mundo, según exija la ley, incluidos aquellos relacionados con el control, la revisión y la aprobación de nuestros estudios, productos y servicios, así como informes de acontecimientos adversos</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="93" datatype="html"><segment segmentId="1">
+<source>Socios con los que desarrollemos conjuntamente productos o servicios</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="94" datatype="html"><segment segmentId="1">
+<source>Profesionales sanitarios, investigadores, académicos y organizaciones de salud pública</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="95" datatype="html"><segment segmentId="1">
+<source>Editores</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="96" datatype="html"><segment segmentId="1">
+<source>A menos que lo prohíba la ley aplicable, podemos divulgar información personal como parte de una transacción comercial corporativa, como una fusión, adquisición, reorganización, empresa conjunta o financiación o venta de nuestros activos, y podemos venderla o transferirla a un tercero como parte de dicha transacción.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>También podemos divulgar información personal a una entidad sucesora en caso de insolvencia, bancarrota o quiebra.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Después de dicha venta o transferencia, puede contactar con el destinatario para hacerle llegar cualquier consulta con respecto al procesamiento de su información personal.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="97" datatype="html"><segment segmentId="1">
+<source>Además, podemos compartir su información personal para cumplir con disposiciones legales o reglamentarias, y proteger contra fraude, actividad ilegal (como identificación y respuesta a incidentes de piratería informática o uso indebido de nuestros sitios web y aplicaciones móviles), así como reclamaciones y otras responsabilidades.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="4" name="4"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="98" datatype="html"><segment segmentId="1">
+<source>Cookies y demás información recopilada por medios automatizados</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="99" datatype="html"><segment segmentId="1">
+<source>Nosotros, nuestros proveedores de servicios y nuestros socios comerciales también podemos recopilar determinada información sobre el uso de nuestros sitios web y aplicaciones móviles mediante medios automatizados, como cookies, balizas web y otras tecnologías (“Información automatizada”).</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Consulte nuestra <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="#13"&gt;</ut>Política de cookies<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut> al final de esta página para obtener más información sobre las cookies.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Nosotros, nuestros proveedores de servicios y socios comerciales podemos recopilar Información automatizada sobre sus actividades en línea a lo largo del tiempo y en nuestros sitios web y de terceros cuando utilice nuestros sitios web y aplicaciones móviles.</source><ws> </ws>
+</segment><segment segmentId="4">
+<source>En jurisdicciones en las que la Información automatizada se considera información personal, o bien si asociamos información automatizada a información personal, trataremos la Información automatizada como información personal de acuerdo con este Aviso sobre privacidad.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="100" datatype="html"><segment segmentId="1">
+<source>La información que recopilamos mediante medios automatizados incluye:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="101" datatype="html"><segment segmentId="1">
+<source>Detalles sobre los dispositivos utilizados para acceder a nuestros sitios web o aplicaciones móviles (como dirección IP, tipo de sistema operativo y navegador)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="102" datatype="html"><segment segmentId="1">
+<source>Fechas y horas de visitas y uso de nuestros sitios web y aplicaciones móviles</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="103" datatype="html"><segment segmentId="1">
+<source>Detalles sobre sus interacciones respecto a los correos electrónicos que nosotros le enviamos, incluidos los enlaces en los que hace clic y sus interacciones con nuestros sitios enlazados, cuando esté permitido por ley</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="104" datatype="html"><segment segmentId="1">
+<source>Información sobre cómo se utilizan nuestros sitios web y aplicaciones móviles (como contenido que se ve en nuestros sitios web y cómo navegan los usuarios entre nuestras páginas web, o bien las funciones de nuestras aplicaciones móviles utilizadas y cómo navegan los usuarios entre pantallas de nuestras aplicaciones móviles)</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="105" datatype="html"><segment segmentId="1">
+<source>URL que remiten a los visitantes a nuestros sitios web</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li align="left"&gt;</skeleton>
+<translatable blockId="106" datatype="html"><segment segmentId="1">
+<source>Términos de búsqueda utilizados para llegar a nuestros sitios web o localizar nuestras aplicaciones móviles</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="107" datatype="html"><segment segmentId="1">
+<source>Los navegadores pueden ofrecer a los usuarios de nuestros sitios web la capacidad de desactivar la recepción de determinados tipos de cookies; sin embargo, si se desactivan las cookies, puede que algunas funciones o funcionalidades de nuestros sitios web no se ejecuten correctamente.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>El menú de “ayuda” de la mayoría de navegadores de Internet contiene información sobre cómo desactivar las cookies, o bien puede visitar <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="http://www.aboutcookies.org/how-to-control-cookies/" target="_blank"&gt;</ut>www.aboutcookies.org/how-to-control-cookies/<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut>.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="8" name="8"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="108" datatype="html"><segment segmentId="1">
+<source>Información para personas del Espacio Económico Europeo y el Reino Unido</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="109" datatype="html"><segment segmentId="1">
+<source>Vertex Pharmaceuticals Incorporated normalmente es el controlador de los datos con respecto al procesamiento de sus datos.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>En muchos casos, la filial local con la que interactúe será un controlador de datos, por sí mismo o conjuntamente con Vertex Pharmaceuticals Incorporated.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Para obtener una lista e información de contacto de las filiales locales, incluidos los controladores de datos locales en la UE, haga clic <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="#14"&gt;</ut>aquí<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut>.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="110" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Base legal para el procesamiento de datos<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="111" datatype="html"><segment segmentId="1">
+<source>En esta sección, identificamos los fundamentos de derecho en los que nos basamos para procesar información personal.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="112" datatype="html"><segment segmentId="1">
+<source>En algunos casos, Vertex tiene un interés legítimo para procesar la información personal que recopilamos, por ejemplo, para desarrollar, administrar y respaldar nuestros productos y servicios; para manejar, evaluar y mejorar nuestro negocio; para facilitar y gestionar ensayos clínicos y otros programas de apoyo y participación de pacientes; para promover la investigación académica; para respaldar nuestras actividades de reclutamiento; o bien para facilitar una venta de activos, fusión o adquisición.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="113" datatype="html"><segment segmentId="1">
+<source>En otros casos, Vertex procesa información personal para cumplir nuestros contratos con nuestros socios comerciales, como profesionales sanitarios o socios que mantienen registros o distribuyen nuestros productos.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="114" datatype="html"><segment segmentId="1">
+<source>También puede ser necesario que Vertex procese información personal para establecer, ejercer o defenderse contra fraude, actividades ilegales, reclamaciones y otras responsabilidades, incluida la ejecución de los términos y condiciones que rigen los servicios que proporcionamos.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="115" datatype="html"><segment segmentId="1">
+<source>El procesamiento que realiza Vertex de determinada información sanitaria o asociada puede ser necesario para cumplir nuestras obligaciones legales y por motivos de interés público en el área de la salud o para fines de investigación científica o histórica, como con respecto a informes de acontecimientos adversos y seguridad de productos.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="116" datatype="html"><segment segmentId="1">
+<source>Vertex también puede procesar información personal según lo permitido específicamente por las disposiciones legales aplicables, como leyes y reglamentos que autoricen a Vertex a procesar información personal para fines de ensayos clínicos.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="117" datatype="html"><segment segmentId="1">
+<source>Si Vertex depende del consentimiento para el procesamiento de su información personal, buscaremos dicho consentimiento en el momento de recopilar su información personal.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Para obtener más información sobre cómo retirar el consentimiento, consulte la sección “Preferencias y derechos de privacidad” de este Aviso sobre privacidad.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="7" name="7"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="118" datatype="html"><segment segmentId="1">
+<source>Transferencias internacionales de datos</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="119" datatype="html"><segment segmentId="1">
+<source>Podemos transferir su información personal a países que no sean aquel en el que se recopilaron originalmente los datos para los fines descritos en este Aviso de privacidad.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Por ejemplo, si se encuentra fuera de Estados Unidos, solemos transferir su información personal a Estados Unidos, donde tiene su sede Vertex.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Puede que los países a los que transferimos información personal no tengan las mismas leyes de protección de datos que el país en el que proporcionó inicialmente la información.</source><ws> </ws>
+</segment><segment segmentId="4">
+<source>Cuando transferimos información personal a través de fronteras, tenemos en cuenta una serie de requisitos que pueden aplicarse a dichas transferencias.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="120" datatype="html"><segment segmentId="1">
+<source>En concreto, podemos transferir información personal del Espacio Económico Europeo o del Reino Unido a:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;ul class="rteindent2"&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="121" datatype="html"><segment segmentId="1">
+<source>países que la Comisión Europea ha considerado que salvaguardan adecuadamente la información personal,</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;li&gt;</skeleton>
+<translatable blockId="122" datatype="html"><segment segmentId="1">
+<source>países terceros para los que la Comisión Europea no ha emitido una decisión de adecuación:</source>
+</segment></translatable>
+<skeleton>
+	&lt;ul class="rteindent1" style="list-style-type:circle;"&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="123" datatype="html"><segment segmentId="1">
+<source>de conformidad con el cumplimiento del destinatario de las cláusulas contractuales estándar, Escudo de Privacidad entre la UE y los EE. UU. o normas corporativas vinculantes,</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li&gt;</skeleton>
+<translatable blockId="124" datatype="html"><segment segmentId="1">
+<source>de conformidad con el consentimiento de la persona a la que pertenece la información personal, o bien</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+		&lt;li align="left"&gt;</skeleton>
+<translatable blockId="125" datatype="html"><segment segmentId="1">
+<source>otras formas permitidas por las disposiciones aplicables del EEE.</source>
+</segment></translatable>
+<skeleton>&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a id="5" name="5"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="126" datatype="html"><segment segmentId="1">
+<source>Opciones de privacidad en línea</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="127" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Redes publicitarias<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="128" datatype="html"><segment segmentId="1">
+<source>Respaldamos los principios autorreguladores de la Digital Advertising Alliance (“DAA”).</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Trabajamos con anunciantes, redes publicitarias, servidores de publicidad y empresas de análisis (“Socios publicitarios”) que utilizan distintas tecnologías para recopilar Información automatizada con el fin de comprender cómo se utilizan nuestros sitios web y aplicaciones móviles, analizar dónde van los usuarios después de salir de nuestros sitios web y aplicaciones móviles con el fin de proporcionar publicidad relevante.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Estos anuncios pueden aparecer en otros sitios web o servicios.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="129" datatype="html"><segment segmentId="1">
+<source>Estos Socios publicitarios pueden reconocer a una persona concreta en sitios web de terceros a lo largo del tiempo y enlazar varios dispositivos utilizados por la misma persona.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Para obtener más información sobre cómo los Socios publicitarios utilizan la información recopilada por estas tecnologías y sobre sus opciones para no aceptar cookies colocadas por algunas de estas empresas en nuestros sitios web y aplicaciones móviles, visite la <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="http://optout.aboutads.info/" target="_blank"&gt;</ut>página de exclusión voluntaria de la DAA<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut>.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Si accede a los sitios web o aplicaciones móviles desde la Unión Europea, visite la <ut x="5" type="ulined">&lt;u&gt;</ut><ut x="6" type="link">&lt;a href="http://www.youronlinechoices.eu/" target="_blank"&gt;</ut>página de exclusión voluntaria de la EDAA<ut x="7" type="unknown">&lt;/a&gt;</ut><ut x="8" type="unknown">&lt;/u&gt;</ut> y si accede a los sitios desde Canadá, visite la <ut x="9" type="ulined">&lt;u&gt;</ut><ut x="10" type="link">&lt;a href="http://youradchoices.ca/choices/" target="_blank"&gt;</ut>página de exclusión voluntaria de la DAAC<ut x="11" type="unknown">&lt;/a&gt;</ut><ut x="12" type="unknown">&lt;/u&gt;</ut>.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="130" datatype="html"><segment segmentId="1">
+<source>Las exclusiones voluntarias descritas anteriormente son específicas de dispositivo y navegador y puede que no funcionen en todos los dispositivos.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Si decide la exclusión voluntaria a través de alguna de estas herramientas de exclusión voluntaria, esto no significa que deje de ver publicidad.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>En su lugar, los anuncios que verá se basarán en el sitio web que visite y no en sus intereses.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="131" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Correos electrónicos de marketing<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="132" datatype="html"><segment segmentId="1">
+<source>Cuando así lo permitan las leyes, podemos enviarle información sobre productos y servicios de Vertex por correo electrónico.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Puede cancelar la suscripción de recepción de correos electrónicos de marketing o comerciales de Vertex siguiendo las instrucciones incluidas en el correo electrónico.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Sin embargo, incluso si opta por no recibir dichas comunicaciones, mantenemos el derecho de enviarle comunicaciones que no sean de marketing (como información importante sobre seguridad de productos o cambios en las condiciones de sitios web o aplicaciones móviles).</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="133" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Preferencias y derechos de privacidad<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="134" datatype="html"><segment segmentId="1">
+<source>Las personas de determinadas jurisdicciones, como el EEE, tienen determinados derechos y opciones con respecto al procesamiento que hace Vertex de su información personal.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Hemos designado un responsable de protección de datos (data protection officer, “DPO”) como punto de contacto para ejercer estos derechos.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Consulte la sección “Cómo contactar con nosotros” a continuación para obtener la información de contacto del DPO.</source><ws> </ws>
+</segment><segment segmentId="4">
+<source>En algunos casos en los que se puede acceder a su información personal a través de un portal o plataforma en línea, puede ejercer estos derechos directamente siguiendo las instrucciones del portal o plataforma.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="135" datatype="html"><segment segmentId="1">
+<source>Tenga en cuenta que si el ejercicio de estos derechos limita nuestra capacidad para procesar información personal, no podremos proporcionar nuestros productos o servicios a las personas que ejercen dichos derechos o relacionadas con dichas personas en adelante.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="136" datatype="html"><segment segmentId="1">
+<source>Nos reservamos el derecho de verificar la identidad de la persona en relación con cualquier solicitud con respecto a la información personal con el fin de garantizar que proporcionamos la información a personas a las que pertenece la información, así como permitir que solo dichas personas y sus representantes autorizados ejerzan derechos con respecto a dicha información.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="137" datatype="html"><segment segmentId="1">
+<source>Para obtener más información sobre los derechos y opciones que los usuarios tienen con respecto a las cookies y el seguimiento en línea, consulte la sección “Cookies y demás información recopilada por medios automatizados” de este Aviso sobre privacidad.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="138" datatype="html"><segment segmentId="1">
+<source>Tenga en cuenta que los residentes del Espacio Económico Europeo también tienen el derecho de presentar una queja ante la autoridad supervisora de su estado miembro.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p style="margin-left:1.0in;"&gt;&lt;em&gt;</skeleton>
+<translatable blockId="139" datatype="html"><segment segmentId="1">
+<source>Retirada del consentimiento</source>
+</segment></translatable>
+<skeleton>&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style="margin-left:1.5in;"&gt;</skeleton>
+<translatable blockId="140" datatype="html"><segment segmentId="1">
+<source>Si nos ha proporcionado su consentimiento para procesar su información personal, puede retirar dicho consentimiento siguiendo las instrucciones que figuran en su formulario de consentimiento informado o, para cancelar la suscripción a correos electrónicos de marketing mediante las instrucciones de la sección “Correos electrónicos de marketing” anterior.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>En algunos casos, la retirada de su consentimiento para el uso o divulgación de su información personal por parte de Vertex implicará que Vertex no pueda proporcionarle productos o servicios o comprometerse con usted de alguna otra forma.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p style="margin-left:1.0in;"&gt;&lt;em&gt;</skeleton>
+<translatable blockId="141" datatype="html"><segment segmentId="1">
+<source>Acceso a la información personal</source><ws> </ws>
+</segment></translatable>
+<skeleton>&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style="margin-left:1.5in;"&gt;</skeleton>
+<translatable blockId="142" datatype="html"><segment segmentId="1">
+<source>Puede solicitar el acceso a la información personal que mantenemos sobre usted.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Si aceptamos su solicitud, le proporcionaremos una copia de la información personal que mantenemos sobre usted en el curso de las actividades comerciales habituales, con un formato común.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Puede solicitar la corrección de cualquier error de su información personal.</source><ws> </ws>
+</segment><segment segmentId="4">
+<source>Podemos rechazar su solicitud de acceso o corrección de su información, en la medida permitida por las leyes aplicables.</source><ws> </ws>
+</segment><segment segmentId="5">
+<source>Si rechazamos su solicitud, le notificaremos los motivos del rechazo.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p style="margin-left:1.0in;"&gt;&lt;em&gt;</skeleton>
+<translatable blockId="143" datatype="html"><segment segmentId="1">
+<source>Portabilidad de la información personal</source>
+</segment></translatable>
+<skeleton>&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style="margin-left:1.5in;"&gt;</skeleton>
+<translatable blockId="144" datatype="html"><segment segmentId="1">
+<source>Puede solicitar que transfiramos su información personal a otro controlador de datos.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Podemos rechazar su solicitud, en la medida permitida por las leyes aplicables.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Si rechazamos su solicitud, le notificaremos los motivos del rechazo.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p style="margin-left:1.0in;"&gt;&lt;em&gt;</skeleton>
+<translatable blockId="145" datatype="html"><segment segmentId="1">
+<source>Oposición y eliminación de la información personal</source>
+</segment></translatable>
+<skeleton>&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style="margin-left:1.5in;"&gt;</skeleton>
+<translatable blockId="146" datatype="html"><segment segmentId="1">
+<source>En la medida permitida por las leyes aplicables, puede oponerse en cualquier momento por motivos legítimos al procesamiento de su información personal o solicitar que eliminemos su información personal de nuestros registros.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Podemos rechazar su solicitud, en la medida permitida por las leyes aplicables.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Si rechazamos su solicitud, le notificaremos los motivos del rechazo.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="147" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="italic">&lt;em&gt;</ut>Profesionales sanitarios<ut x="3" type="unknown">&lt;/em&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="148" datatype="html"><segment segmentId="1">
+<source>El acceso a la sección para profesionales sanitarios de algunos de nuestros sitios web está protegido por contraseña mediante un proveedor externo de tecnología de autenticación de usuario (“servicio de autenticación”).</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Si es un profesional sanitario y desea acceder a la sección para profesionales sanitarios de dichos sitios web, debe registrarse primero con el servicio de autenticación.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>A continuación, podrá utilizar su nombre de usuario y contraseña autenticados para acceder a la sección para profesionales sanitarios del sitio web.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="149" datatype="html"><segment segmentId="1">
+<source>Este procedimiento de registro se produce en el sitio web del servicio de autenticación externo y, si es residente de la Unión Europea, dicho servicio es el “controlador de datos” de dichos datos.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Al registrarse o utilizar el servicio de autenticación para acceder a uno de nuestros sitios web, el servicio de autenticación transferirá automáticamente sus datos de registro cifrados a Vertex o servidores de proveedores de servicios o socios comerciales de Vertex.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Sin embargo, Vertex o los proveedores de servicios o socios comerciales de Vertex no recibirán su información personal como parte del suministro de acceso a la sección para profesionales sanitarios.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="6" name="6"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="150" datatype="html"><segment segmentId="1">
+<source>Retención de datos</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="151" datatype="html"><segment segmentId="1">
+<source>Retendremos su información solo mientras sea necesario para cumplir los fines para los que se recopiló dicha información, en función de los fines para los que se recopiló la información, la naturaleza de la información, cualquier relación contractual que pueda regir la retención de los datos y nuestras obligaciones legales o reglamentarias.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Posteriormente, destruiremos su información o la anonimizaremos, de acuerdo con las leyes aplicables.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="9" name="9"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="152" datatype="html"><segment segmentId="1">
+<source>Cómo protegemos la información personal</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="153" datatype="html"><segment segmentId="1">
+<source>Vertex mantiene medidas razonables de protección administrativas, técnicas y físicas diseñadas para proteger la información personal que mantenemos frente a la destrucción, la pérdida, la alteración, el acceso, la divulgación o el uso accidentales, ilegales o no autorizados.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Sin embargo, no podemos asegurar que las medidas que mantenemos garanticen la seguridad de la información personal.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="10" name="10"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="154" datatype="html"><segment segmentId="1">
+<source>Enlaces a sitios web y contenido de terceros</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="155" datatype="html"><segment segmentId="1">
+<source>Para su comodidad e información, podemos proporcionar enlaces a sitios web y otro contenido de terceros que no es propiedad ni está gestionado por Vertex.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Los sitios web y el contenido de terceros al que proporcionamos enlaces pueden tener avisos y políticas de privacidad independientes.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Vertex no es responsable de las prácticas de privacidad de ninguna entidad que no sea de su propiedad ni esté bajo su control.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="11" name="11"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="156" datatype="html"><segment segmentId="1">
+<source>Actualizaciones de nuestro Aviso sobre privacidad</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="157" datatype="html"><segment segmentId="1">
+<source>Vertex se reserva el derecho de cambiar este Aviso sobre privacidad en cualquier momento.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Cuando actualicemos este Aviso sobre privacidad, le notificaremos los cambios que se consideren materiales según las disposiciones legales aplicables actualizando la fecha de este Aviso sobre privacidad y proporcionando otra notificación en virtud de las leyes aplicables.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>También podemos notificarle cambios en el Aviso sobre privacidad de otras formas, como por correo electrónico u otra información de contacto que haya proporcionado.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="12" name="12"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="158" datatype="html"><segment segmentId="1">
+<source>Cómo contactar con nosotros</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="159" datatype="html"><segment segmentId="1">
+<source>Puede contactar con nosotros para hacernos preguntas, comentarios o quejas sobre este Aviso sobre privacidad o nuestras prácticas de privacidad, o para solicitar el acceso o la corrección de su información.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Nuestra información de contacto es la siguiente:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p style="margin-left:.5in;"&gt;</skeleton>
+<translatable blockId="160" datatype="html"><segment segmentId="1">
+<source>Vertex Pharmaceuticals Incorporated</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="161" datatype="html"><segment segmentId="1">
+<ws> </ws><source>Attn:</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Legal Department - Privacy</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="162" datatype="html"><segment segmentId="1">
+<ws> </ws><source>50 Northern Avenue</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="163" datatype="html"><segment segmentId="1">
+<ws> </ws><source>Boston, MA 02210</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="164" datatype="html"><segment segmentId="1">
+<ws> </ws><source><ut x="1" type="link">&lt;a href="mailto:privacy@vrtx.com"&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>privacy@vrtx.com<ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/a&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="165" datatype="html"><segment segmentId="1">
+<source>Información de contacto de la responsable de protección de datos de Vertex:</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p style="margin-left:.5in;"&gt;</skeleton>
+<translatable blockId="166" datatype="html"><segment segmentId="1">
+<source>Sara Berkson</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="167" datatype="html"><segment segmentId="1">
+<ws> </ws><source>Head Privacy Counsel</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="168" datatype="html"><segment segmentId="1">
+<ws> </ws><source>Senior Director, Assistant General Counsel</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="169" datatype="html"><segment segmentId="1">
+<ws> </ws><source>50 Northern Avenue</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="170" datatype="html"><segment segmentId="1">
+<ws> </ws><source>Boston, MA 02210</source>
+</segment></translatable>
+<skeleton>&lt;br /&gt;</skeleton>
+<translatable blockId="171" datatype="html"><segment segmentId="1">
+<ws> </ws><source><ut x="1" type="link">&lt;a href="mailto:privacy@vrtx.com"&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>privacy@vrtx.com<ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/a&gt;</ut></source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="13" name="13"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="172" datatype="html"><segment segmentId="1">
+<source>POLÍTICA DE COOKIE DE VERTEX</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="173" datatype="html"><segment segmentId="1">
+<source>Fecha de entrada en vigor:</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>7 de diciembre de 2018.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="174" datatype="html"><segment segmentId="1">
+<source>Consentimiento</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="175" datatype="html"><segment segmentId="1">
+<source>Al utilizar el sitio web de Vertex y cualquier otro sitio web (incluidos sitios web optimizados para dispositivos móviles) propiedad de o controlados por Vertex y que se enlacen a esta Política de cookies (conjuntamente, el “Sitio web”), da su consentimiento al uso de cookies de acuerdo con esta Política de cookies.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="176" datatype="html"><segment segmentId="1">
+<source>¿Qué son las cookies?</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="177" datatype="html"><segment segmentId="1">
+<source>Las cookies son pequeñas cantidades de datos que su navegador almacena en su dispositivo a petición de algunos sitios web.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>A continuación, las cookies se reenvían al dominio web de origen en sus visitas posteriores a dicho dominio.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>La mayoría de páginas web contienen elementos de varios dominios web para que cuando visite el sitio web, su navegador pueda recibir cookies de varios orígenes.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="178" datatype="html"><segment segmentId="1">
+<source>Las cookies son útiles porque permiten que un sitio web reconozca un dispositivo de un usuario.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Las cookies le permiten navegar entre páginas de forma eficaz, recordar preferencias y mejorar en general la experiencia del usuario.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>También se pueden utilizar para adaptar publicidad a sus intereses mediante el seguimiento de su navegación por los sitios web.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="179" datatype="html"><segment segmentId="1">
+<source>Se utilizan dos tipos principales de cookies, cookies de sesión y cookies persistentes.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Las cookies de sesión se eliminan automáticamente al cerrar el navegador y las cookies persistentes permanecen en su dispositivo después de cerrar el navegador (por ejemplo para recordar sus preferencias de usuario cuando vuelva al sitio).</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Cada cookie suele encajar con una de varias categorías.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="180" datatype="html"><segment segmentId="1">
+<source>¿Qué tipos de cookies utiliza Vertex?</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="181" datatype="html"><segment segmentId="1">
+<source>Describimos las categorías de cookies que utilizan Vertex y sus contratistas a continuación.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;</skeleton>
+<translatable blockId="182" datatype="html"><segment segmentId="1">
+<source>Cookies estrictamente necesarias</source>
+</segment></translatable>
+<skeleton>&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="183" datatype="html"><segment segmentId="1">
+<source>Estas cookies son esenciales para permitirle moverse por el Sitio web y utilizar sus funciones.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Sin estas cookies, no se podrán proporcionar los servicios que haya solicitado (como navegación entre páginas).</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;</skeleton>
+<translatable blockId="184" datatype="html"><segment segmentId="1">
+<source>Cookies de rendimiento</source>
+</segment></translatable>
+<skeleton>&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="185" datatype="html"><segment segmentId="1">
+<source>Utilizamos cookies de análisis para analizar cómo utilizan nuestros visitantes nuestro Sitio web y para controlar el rendimiento del Sitio web, incluidas las de Google Analytics.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Esto nos permite proporcionar una experiencia de gran calidad personalizando nuestra oferta e identificando y corrigiendo rápidamente cualquier problema que surja.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Por ejemplo, podemos utilizar cookies de rendimiento para realizar un seguimiento de qué páginas son más populares, qué método de enlace entre páginas es más eficaz y para determinar por qué algunas páginas muestran mensajes de error.</source><ws> </ws>
+</segment><segment segmentId="4">
+<source>También podemos utilizar estas cookies para destacar artículos o servicios del sitio que creemos que serán de su interés según su uso del sitio web.</source><ws> </ws>
+</segment><segment segmentId="5">
+<source>Ni nosotros ni nuestros contratistas asociamos la información recopilada por estas cookies a información personal.</source><ws> </ws>
+</segment><segment segmentId="6">
+<source>Puede excluirse de Google Analytics <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="https://tools.google.com/dlpage/gaoptout" target="_blank"&gt;</ut>aquí<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut>.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;</skeleton>
+<translatable blockId="186" datatype="html"><segment segmentId="1">
+<source>Cookies de funcionalidad del sitio web</source>
+</segment></translatable>
+<skeleton>&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="187" datatype="html"><segment segmentId="1">
+<source>Utilizamos cookies para proporcionarle determinadas funcionalidades.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Por ejemplo, para recordar elecciones realizadas (como su nombre de usuario, idioma o región en la que está) o para reconocer la plataforma desde la que accede al sitio, y para proporcionar funciones mejoradas y más personales.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Estas cookies no se utilizan para realizar un seguimiento de su navegación en otros sitios.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="188" datatype="html"><segment segmentId="1">
+<source>Desactivación de cookies</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="189" datatype="html"><segment segmentId="1">
+<source>Si no está de acuerdo con el uso de cookies que no sean estrictamente necesarias, puede desactivarlas siguiendo las instrucciones para su navegador que se explican en <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="http://www.allaboutcookies.org/manage-cookies/" target="_blank"&gt;</ut>http://www.allaboutcookies.org/manage-cookies/<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut>.</source><ws> </ws>
+</segment><segment segmentId="2">
+<source>Tenga en cuenta que es posible que algunos de nuestros servicios no funcionen correctamente si están desactivadas las cookies.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>También puede excluir el uso de cookies de terceros, si está disponible, mediante los enlaces proporcionados en esta Política de cookies.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="190" datatype="html"><segment segmentId="1">
+<source>Además, algunos de nuestros proveedores de servicios que establecen cookies a través de nuestro sitio en nuestro nombre pueden ofrecer la posibilidad de excluir el uso de cookies a través de la <ut x="1" type="ulined">&lt;u&gt;</ut><ut x="2" type="link">&lt;a href="http://optout.networkadvertising.org/#!/" target="_blank"&gt;</ut>herramienta<ut x="3" type="unknown">&lt;/a&gt;</ut><ut x="4" type="unknown">&lt;/u&gt;</ut> de exclusión del consumidor de Network Advertising Initiative, la <ut x="5" type="ulined">&lt;u&gt;</ut><ut x="6" type="link">&lt;a href="http://www.youronlinechoices.eu/" target="_blank"&gt;</ut>herramienta<ut x="7" type="unknown">&lt;/a&gt;</ut><ut x="8" type="unknown">&lt;/u&gt;</ut> de exclusión del consumidor de European Interactive Digital Advertising Alliance o la  <ut x="9" type="ulined">&lt;u&gt;</ut><ut x="10" type="link">&lt;a href="http://optout.aboutads.info/#!/" target="_blank"&gt;</ut>Digital Advertising Alliance’s Consumer Choice Page<ut x="11" type="unknown">&lt;/a&gt;</ut><ut x="12" type="unknown">&lt;/u&gt;</ut>.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="191" datatype="html"><segment segmentId="1">
+<source>La Política de cookies no abarca los sitios web de tercero</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="192" datatype="html"><segment segmentId="1">
+<source>Tenga en cuenta que esta Política de cookies no se aplica a, y no somos responsables de, las prácticas de cookies de sitios web de terceros que pueden estar enlazados a este Sitio web.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="193" datatype="html"><segment segmentId="1">
+<source>Cambios en la Política de cookies</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;</skeleton>
+<translatable blockId="194" datatype="html"><segment segmentId="1">
+<source>Podemos actualizar esta Política de cookies y le animamos a revisarla de vez en cuando para seguir informado sobre cómo utilizamos las cookies.</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+
+&lt;p&gt;&lt;a id="14" name="14"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 align="center"&gt;&lt;strong&gt;</skeleton>
+<translatable blockId="195" datatype="html"><segment segmentId="1">
+<source>ENTIDADES CORPORATIVAS DE VERTEX QUE ABARCA ESTE AVISO</source>
+</segment></translatable>
+<skeleton>&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="196" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Estados Unidos:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals Incorporated, situada en 50 Northern Avenue, Boston, Massachusetts, Estados Unidos de América 02210</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="197" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Canadá:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Canada) Incorporated, situada en 20 Bay Street, Suite No.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>1520, Toronto, Ontario, Canadá M5J 2N8</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="198" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Australia:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Australia) Pty.</source><ws> </ws>
+</segment><segment segmentId="3">
+<source>Ltd., situada en 601 Pacific Highway, Level 3 Suite 3, Sídney, NSW 2065, Australia</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="199" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Brasil:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Farmacêutica do Brasil Ltda., situada en Rua Trindade, No. 125, Bloco 2, Jardim Margarida, 06730-000, Vargem Grande Paulista, São Paulo (Brasil)</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="200" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Suiza:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (CH) GmbH, situada en Baarerstrasse 88, 6300 Zug, Suiza</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="201" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>República Checa:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Czech Republic) s.r.o., situada en Štětkova 1638/18, Nusle, 140 00 Praga 4, República Checa</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="202" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Italia:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Italy) S.r.L, situada en 6 ° piano, Via Leonida Bissolati 76, 00187 Roma, Italia</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="203" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Francia:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (France) SAS, situada en 32 Rue des Mathurins, Floors 4&amp;5, 75008, París, Francia</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="204" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Alemania:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Germany) GmbH, situada en Sonnenstrasse 19, 80331, Múnich, Alemania</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="205" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>España:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Spain), S.L., situada en Torre Serrano, calle Serrano n º 47-13º, 28001 Madrid, España</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="206" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Países Bajos:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Netherlands) B.V., situada en Leidsevaart 20 2013 HA Haarlem, Países Bajos</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="207" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Austria:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals GmbH, situada en Euro Plaza, Building H Lehrbachgasse 13 1120 Viena Austria</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="208" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Portugal:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Portugal) Unipessoal Lda., situada en Torre de Monsanto Rua Afonso Praça nº 30, 7º 1495-061 Miraflores Portugal</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="209" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Suecia:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Sweden) AB, situada en Torsgatan 13, 8 tr 111 23 Estocolmo Suecia</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="210" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Irlanda:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Ireland) Limited, situada en 26-32 Upper Pembroke St., Dublín 2 Irlanda</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="211" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Reino Unido:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Europe) Limited, situada en 2 Kingdom Street, 9th Floor, Londres W2 6BD Reino Unido</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="212" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Dinamarca:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals Denmark filial af Vertex Pharmaceuticals (Europe) Limited, una rama danesa de Vertex Pharmaceuticals (Europe) Limited, situada en Bredgade 6,1 Floor, 1260 Copenhague (Dinamarca)</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="213" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Noruega:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Europe) Limited NUF, una rama noruega de Vertex Pharmaceuticals (Europe) Limited, situada en P.O. Box 2734 Solli, 0204 Oslo, Noruega</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="214" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Grecia:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals Single Member Societe Anonyme (sociedad anónima griega), con oficinas en 62 Kifissias Avenue, 15124 Marusi, Grecia</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;</skeleton>
+<translatable blockId="215" datatype="html"><segment segmentId="1">
+<source><ut x="1" type="bold">&lt;strong&gt;</ut><ut x="2" type="ulined">&lt;u&gt;</ut>Polonia:</source><ws><ut x="3" type="unknown">&lt;/u&gt;</ut><ut x="4" type="unknown">&lt;/strong&gt;</ut> </ws>
+</segment><segment segmentId="2">
+<source>Vertex Pharmaceuticals (Poland) sp. z.o.o., situada en Warsaw Financial Centre, Emilii Plater, nr 53, 00-113, Varsovia, Polonia</source>
+</segment></translatable>
+<skeleton>&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;
+</skeleton>
+</txml>

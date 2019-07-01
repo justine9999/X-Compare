@@ -381,7 +381,7 @@ public class FileUtils {
 				sb.append("=> " + file.getName()+"\n");
 				File filecopy = new File(tempfolder + File.separator + file.getName());
 				org.apache.commons.io.FileUtils.copyFile(file, filecopy);
-				String txml = FileConverter.convertExcelToTxml(filecopy.getAbsolutePath(), sourcelanguage, configfiledir);
+				String txml = FileConverter.convertExcelToTxml(filecopy.getAbsolutePath(), configfiledir, sourcelanguage);
 				txmls.add(new File(txml));
 				
 			}else{
@@ -407,7 +407,7 @@ public class FileUtils {
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
 			DOMSource source = new DOMSource(doc);
-			StreamResult result = new StreamResult(new File(configFileFullPath));
+			StreamResult result = new StreamResult(new File(configFileFullPath).getAbsolutePath());
       
 			transformer.transform(source, result);
 		}

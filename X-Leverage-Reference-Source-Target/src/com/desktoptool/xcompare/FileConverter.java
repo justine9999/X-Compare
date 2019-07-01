@@ -34,7 +34,7 @@ public class FileConverter {
 		return txml;
 	}
 	
-	public static String convertExcelToTxml(String source, String sourcelanguage, String configfiledir) throws Exception {
+	public static String convertExcelToTxml(String source, String configfiledir, String sourcelanguage) throws Exception {
 		
 		List<String> sources = new ArrayList<String>();
 		sources.add(source);

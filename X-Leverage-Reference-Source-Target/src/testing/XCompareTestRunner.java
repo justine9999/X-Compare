@@ -6,7 +6,7 @@ import org.junit.runner.notification.Failure;
 
 public class XCompareTestRunner {
 	public static void main(String[] args) {
-	      Result result = JUnitCore.runClasses(XCompareTest.class);
+	      Result result = JUnitCore.runClasses(XCompareTestSuite.class);
 			
 	      for (Failure failure : result.getFailures()) {
 	         System.out.println(failure.toString());
