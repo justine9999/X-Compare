@@ -81,7 +81,7 @@ public class FileUtils {
 			if(read_source){
 				Element source = segment.element("source");
 				if(source != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText().trim(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), reformatSegmentTextWithTags(source, true), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
 					listsegments.add(xsegment);
 				}else{
 					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
@@ -90,7 +90,7 @@ public class FileUtils {
 			}else{
 				Element target = segment.element("target");
 				if(target != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText().trim(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), reformatSegmentTextWithTags(target, false), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
 					listsegments.add(xsegment);
 				}else{
 					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
@@ -132,6 +132,29 @@ public class FileUtils {
 					listsegments.add(xsegment);
 				}
 			}
+		}
+	}
+	
+	private static String reformatSegmentTextWithTags(Element e, boolean issource) {
+		
+		if(issource){
+			String srcContent = e.asXML().replaceAll("<source[^>]*?>", "").replaceAll("</source>", "");
+			List<Element> srcPlaceHolders = e.elements("ut");
+			for (int j = 0; j < srcPlaceHolders.size(); j++)
+			{
+				String pText = ((Element)srcPlaceHolders.get(j)).asXML();
+				srcContent = srcContent.replace(pText, "[" + (j + 1) + "]");
+			}
+			return srcContent;
+		}else{
+			String trgContent = e.asXML().replaceAll("<target[^>]*?>", "").replaceAll("</target>", "");
+			List<Element> trgPlaceHolders = e.elements("ut");
+			for (int j = 0; j < trgPlaceHolders.size(); j++)
+			{
+				String pText = ((Element)trgPlaceHolders.get(j)).asXML();
+				trgContent = trgContent.replace(pText, "[" + (j + 1) + "]");
+			}
+			return trgContent;
 		}
 	}
 	

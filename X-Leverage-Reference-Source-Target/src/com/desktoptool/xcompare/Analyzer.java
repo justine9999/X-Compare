@@ -323,7 +323,7 @@ public class Analyzer {
 			}
 						
 			deleteEmptyRange(oidx+1, ccells, 1, 0, 6);
-			boolean hasTarget = !ccells.get(start, 7).getDisplayStringValue().trim().equals("") || !ccells.get(start, 7).getFormula().trim().equals("");
+			boolean hasTarget = (ccells.get(start, 7).getDisplayStringValue() != null && !ccells.get(start, 7).getDisplayStringValue().trim().equals("")) || (ccells.get(start, 7).getFormula() != null && !ccells.get(start, 7).getFormula().trim().equals(""));
 			if(hasTarget){
 				deleteEmptyRange(cidx+1, ccells, 7, 7, 12);
 			}
