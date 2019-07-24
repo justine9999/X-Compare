@@ -143,7 +143,7 @@ public class FileUtils {
 			for (int j = 0; j < srcPlaceHolders.size(); j++)
 			{
 				String pText = ((Element)srcPlaceHolders.get(j)).asXML();
-				srcContent = srcContent.replace(pText, "[" + (j + 1) + "]");
+				srcContent = srcContent.replace(pText, "{" + (j + 1) + "}");
 			}
 			return srcContent;
 		}else{
@@ -152,7 +152,7 @@ public class FileUtils {
 			for (int j = 0; j < trgPlaceHolders.size(); j++)
 			{
 				String pText = ((Element)trgPlaceHolders.get(j)).asXML();
-				trgContent = trgContent.replace(pText, "[" + (j + 1) + "]");
+				trgContent = trgContent.replace(pText, "{" + (j + 1) + "}");
 			}
 			return trgContent;
 		}
