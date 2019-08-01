@@ -137,6 +137,7 @@ public class FileUtils {
 	
 	private static String reformatSegmentTextWithTags(Element e, boolean issource) {
 		
+		//return e.getText();
 		if(issource){
 			String srcContent = e.asXML().replaceAll("<source[^>]*?>", "").replaceAll("</source>", "");
 			List<Element> srcPlaceHolders = e.elements("ut");

@@ -313,8 +313,9 @@ public class Analyzer {
 			
 			if(config.isAutoalign_previous_translation()){
 				String targetstringval = ccells.get(start, 7).getDisplayStringValue();
-				alignedtargets.put(segid, targetstringval.equals("#N/A")?"":targetstringval.split(" - ")[0]);
-				int alignedscore = targetstringval.equals("#N/A")?0:Integer.parseInt(targetstringval.split(" - ")[1]);
+				alignedtargets.put(segid, targetstringval.equals("#N/A")?"":targetstringval.substring(0, targetstringval.lastIndexOf('-')).trim());
+				String alignedscore_str = targetstringval.equals("#N/A")?"[ 0 ]":targetstringval.substring(targetstringval.lastIndexOf('-')+1, targetstringval.length()).trim();
+				int alignedscore = Integer.parseInt(alignedscore_str.substring(1, alignedscore_str.length()-1).trim());
 				String score_text = ccells.get(start, 4).getDisplayStringValue().trim();
 				int matchscore = score_text.equals("100-")?75:Integer.parseInt(score_text);
 				matchscore = matchscore == 100?99:75;
