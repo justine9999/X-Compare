@@ -311,7 +311,7 @@ public class Analyzer {
 				int alignedscore = Integer.parseInt(alignedscore_str.substring(1, alignedscore_str.length()-1).trim());
 				String score_text = ccells.get(start, 4).getDisplayStringValue().trim();
 				int matchscore = score_text.equals("100-")?75:Integer.parseInt(score_text);
-				matchscore = matchscore == 100?99:75;
+				matchscore = matchscore == 100?99:80;
 				int finalscore = alignedscore == 0?0:matchscore;
 				scores.put(segid, Integer.toString(finalscore));
 			}
@@ -649,7 +649,7 @@ public class Analyzer {
 					//get highest match from aligned target reference text
 					if(align_results.containsKey(ref_text)){
 						int source_match_score = score_text.equals("100-")?75:Integer.parseInt(score_text);
-						source_match_score = source_match_score == 100?99:75;
+						source_match_score = source_match_score == 100?99:80;
 						int autoaligner_confidence_score = Integer.parseInt(align_results.get(ref_text)[1]);
 						//int final_score = autoaligner_confidence_score * source_match_score / 100;
 						int final_score = autoaligner_confidence_score == 0?0:source_match_score;
