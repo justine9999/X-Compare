@@ -192,6 +192,7 @@ public class Analyzer {
 		workbook.save(finalreport);
 		this.targetReport = finalreport;
 		
+		//if run against old excel report
 		if(source_reference_xsegments.size() == 0){
 			String previousrerpot = sourceReferencefiles.get(0);
 			String populatedfile = new File(this.populatefolder).listFiles()[0].getAbsolutePath();
@@ -290,15 +291,7 @@ public class Analyzer {
 		
 		while(true){
 			
-			// for populating source file
 			String segid = ccells.get(start, 0).getStringValue();
-			String score = ccells.get(start, 4).getStringValue().trim();
-			String note = ccells.get(start, 5).getStringValue().trim();
-			if(!note.equals("")){
-				notes.put(segid, note);
-			}else{
-				conclusions.put(segid, score);
-			}
 			
 			//shift non-empty matches up
 			shiftRange(ccells, start, 1);
@@ -351,6 +344,17 @@ public class Analyzer {
 			int final_target_match_cnt = countMathces(start, start+max_span-1, 12, ccells);
 			formatSourceIdCell(start, max_span, final_source_match_cnt, final_target_match_cnt, ccells, hasTarget);
 			
+			
+			// for populating source file
+			String score = ccells.get(start, 4).getStringValue().trim();
+			String note = ccells.get(start, 5).getStringValue().trim();
+			if(!note.equals("")){
+				notes.put(segid, note);
+			}else{
+				conclusions.put(segid, score);
+			}
+						
+						
 			start += max_span;
 			
 			if(ccells.get(start, 1).getStringValue().equals("") 
@@ -472,9 +476,8 @@ public class Analyzer {
 		for(int i = start; i <= end; i++){
 
 			String cell_ref_str = cells.get(i, col+1).getDisplayStringValue().trim();
-			String cell_track_str = cells.get(i, col+2).getDisplayStringValue().trim();
 			
-			if(!cell_ref_str.equals("") && cell_track_str.equals("")){
+			if(!cell_ref_str.equals("")){
 				
 				String cell_src_str_normalize = NormalizationUtils.normalize(cell_src_str, config, language);
 				String cell_ref_str_normalize = NormalizationUtils.normalize(cell_ref_str, config, language);
@@ -492,10 +495,14 @@ public class Analyzer {
 				}
 				
 				cells.get(i, col+2).setHtmlString(trackedString);
-				
-				formatReferenceCell(cells.get(i, col+1), cells);
-				formatSimilarityScoreCell(cells.get(i, col+3), cells);
+
+			} else {
+				cells.get(i, col+3).setValue(0);
+				cells.get(i, col+2).setHtmlString("");
 			}
+			
+			formatReferenceCell(cells.get(i, col+1), cells);
+			formatSimilarityScoreCell(cells.get(i, col+3), cells);
 		}
 	}
 	
@@ -1666,7 +1673,7 @@ public class Analyzer {
 		double score = (double)LevenshteinDistance.getMatchScore(str1,str2,s1,e1,s2,e2);
 		
 		String regex_1, regex_2;
-		if(s2 == -1 || e2 == -1) System.out.println("\"" + str1 + "\"" + "\"" + str2 + "\"");
+		//if(s2 == -1 || e2 == -1) System.out.println("\"" + str1 + "\"" + "\"" + str2 + "\"");
 		str1 = str1.substring(s1, e1+1);
 		str2 = str2.substring(s2, e2+1);
 		//if is character based language, use character level match, otherwise use word level match
