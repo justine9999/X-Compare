@@ -81,19 +81,19 @@ public class FileUtils {
 			if(read_source){
 				Element source = segment.element("source");
 				if(source != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), reformatSegmentTextWithTags(source, true), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), reformatSegmentTextWithTags(source, true), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode), source.content());
 					listsegments.add(xsegment);
 				}else{
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "", null);
 					listsegments.add(xsegment);
 				}
 			}else{
 				Element target = segment.element("target");
 				if(target != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), reformatSegmentTextWithTags(target, false), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), reformatSegmentTextWithTags(target, false), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode), target.content());
 					listsegments.add(xsegment);
 				}else{
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "", null);
 					listsegments.add(xsegment);
 				}
 			}
@@ -116,26 +116,26 @@ public class FileUtils {
 			if(read_source){
 				Element source = transunit.element("source");
 				if(source != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText().trim(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), source.getText().trim(), NormalizationUtils.normalize(source.getText(), config, sourceLanguageCode), source.content());
 					listsegments.add(xsegment);
 				}else{
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "", null);
 					listsegments.add(xsegment);
 				}
 			}else{
 				Element target = transunit.element("target");
 				if(target != null) {
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText().trim(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode));
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), target.getText().trim(), NormalizationUtils.normalize(target.getText(), config, targetLanguageCode), target.content());
 					listsegments.add(xsegment);
 				}else{
-					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "");
+					XSegment xsegment = new XSegment(filename, Integer.toString(i+1), "", "", null);
 					listsegments.add(xsegment);
 				}
 			}
 		}
 	}
 	
-	private static String reformatSegmentTextWithTags(Element e, boolean issource) {
+	public static String reformatSegmentTextWithTags(Element e, boolean issource) {
 		
 		//return e.getText();
 		if(issource){

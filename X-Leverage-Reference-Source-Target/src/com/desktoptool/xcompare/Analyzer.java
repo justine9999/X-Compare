@@ -353,8 +353,7 @@ public class Analyzer {
 			}else{
 				conclusions.put(segid, score);
 			}
-						
-						
+			
 			start += max_span;
 			
 			if(ccells.get(start, 1).getStringValue().equals("") 
@@ -942,7 +941,7 @@ public class Analyzer {
 					String seg_range = (k-j-1==0)?(""+s):(s + " - " + (s+k-j-1));
 					String str = refStr.substring(boundaries[j][0], boundaries[k-1][1]+1);
 					String strNormalized = refStrNormalized.substring(boundariesNormalized[j][0], boundariesNormalized[k-1][1]+1);
-					XSegment xsegment_match = new XSegment(reference_xsegments.get(j).getSource_file_name(), seg_range, str, strNormalized);
+					XSegment xsegment_match = new XSegment(reference_xsegments.get(j).getSource_file_name(), seg_range, str, strNormalized, new ArrayList());
 					similar_reference_segments.add(xsegment_match);
 					scores.add(prev_scores);
 					end = (k-1);
@@ -1018,7 +1017,7 @@ public class Analyzer {
 					String seg_range = (head==end)?(""+s):(s + " - " + (s+end-head));
 					String str = refStr.substring(boundaries[head][0], boundaries[end][1]+1);
 					String strNormalized = refStrNormalized.substring(boundariesNormalized[head][0], boundariesNormalized[end][1]+1);
-					XSegment xsegment_match = new XSegment(reference_xsegments.get(head).getSource_file_name(), seg_range, str, strNormalized);
+					XSegment xsegment_match = new XSegment(reference_xsegments.get(head).getSource_file_name(), seg_range, str, strNormalized, new ArrayList());
 					similar_reference_segments.add(xsegment_match);
 					scores.add(prev_scores2);
 					
@@ -1858,7 +1857,7 @@ public class Analyzer {
 	    	org.dom4j.Element segment_src = translatable_src.addElement("segment");
 	        segment_src.addAttribute("segmentId", Integer.toString(segmentId));   
 	        segmentId++;
-	        segment_src.addElement("source").setText(segment.getContent());
+	        segment_src.addElement("source").setContent(segment.getContent_list());
 	    }
 	    
 	    segmentId = 0;
@@ -1867,7 +1866,7 @@ public class Analyzer {
 	    	org.dom4j.Element segment_trg = translatable_trg.addElement("segment");
 	    	segment_trg.addAttribute("segmentId", Integer.toString(segmentId));   
 	        segmentId++;
-	        segment_trg.addElement("source").setText(segment.getContent());
+	        segment_trg.addElement("source").setContent(segment.getContent_list());
 	    }
 	    
 	    OutputStreamWriter writer = new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(nbsourcefolder + File.separator + sourcelanguage + ".txml")), "UTF8");
@@ -1882,7 +1881,7 @@ public class Analyzer {
 	    
 	    String pahtexe = "\\\\10.2.50.190\\AutoAlignerCLI\\AutoAlignerCLI.exe";
 
-	    ProcessBuilder pb = new ProcessBuilder(new String[] { pahtexe, "-i", nbalignerfolder, "-o", nbalignerfolder, "-lang_pairs", sourcelanguage + "_" + targetlanguage, "-lang_detect", "off", "-identicals", "-match_filenames", "-txml_or_xmx_output", "-docnames_output", "-disallow_src_merging" });
+	    ProcessBuilder pb = new ProcessBuilder(new String[] { pahtexe, "-i", nbalignerfolder, "-o", nbalignerfolder, "-lang_pairs", sourcelanguage + "_" + targetlanguage, "-lang_detect", "off", "-identicals", "-match_filenames", "-txml_or_xmx_output", "-docnames_output", "-tags", "-disallow_src_merging" });
 	    pb.redirectErrorStream(true);
 	    
 	    Process p = pb.start();
@@ -1937,7 +1936,7 @@ public class Analyzer {
 	    		
 	    		String sourcetext = "";
 	    		if(source != null && !source.getTextTrim().equals("")){
-	    			sourcetext = source.getTextTrim();
+	    			sourcetext = FileUtils.reformatSegmentTextWithTags(source, true);
 	    		}
 	    		String targettext = "";
 	    		if(target != null && !target.getTextTrim().equals("")){
