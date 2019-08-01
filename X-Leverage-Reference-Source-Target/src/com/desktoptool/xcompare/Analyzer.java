@@ -821,7 +821,7 @@ public class Analyzer {
 		int idx = 1;
 		while(it.hasNext()){
 			Map.Entry<String, String[]> entry = (Map.Entry<String, String[]>)it.next();
-			String source = entry.getKey();
+			String source = entry.getKey().replaceAll("\\[repeat\\]+$", "");
 			String target = entry.getValue()[0];
 			String score = entry.getValue()[1];
 			
@@ -1953,16 +1953,24 @@ public class Analyzer {
 	    		}else if(!sourcetext.equals("") && targettext.equals("")){
 	    			if(!results.containsKey(sourcetext)){
 	    				results.put(sourcetext, new String[] { "", "0" });
+	    			}else{
+	    				results.put(sourcetext+"[repeat]", new String[] { "", "0" });
 	    			}
 	    		}else if(!sourcetext.equals("") && !targettext.equals("")){
 	    			if(score.equals("0")){
 	    				if(!results.containsKey(sourcetext)){
 	    					results.put(sourcetext, new String[] { "", "0" });
+	    				}else{
+	    					results.put(sourcetext+"[repeat]", new String[] { "", "0" });
 	    				}
 	    				results.put(NULL_SOURCE_REFERENCE_STR + " - " + no_source_index, new String[] { targettext, "0" });
 		    			no_source_index++;
 	    			}else{
-	    				results.put(sourcetext, new String[] { targettext, score });
+	    				if(!results.containsKey(sourcetext)){
+	    					results.put(sourcetext, new String[] { targettext, score });
+	    				}else{
+	    					results.put(sourcetext+"[repeat]", new String[] { targettext, score });
+	    				}
 	    			}
 	    		}
 	    	}
