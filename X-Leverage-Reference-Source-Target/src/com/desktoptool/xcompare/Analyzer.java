@@ -11,7 +11,6 @@ import java.io.Writer;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -241,7 +240,7 @@ public class Analyzer {
 			}
 		}
 		
-		
+		//if old report has auto-aligned content
 		if(config.isAutoalign_previous_translation()){
 			
 			Cells ocells_orphan = ow.getWorksheets().get(2).getCells();
@@ -264,6 +263,7 @@ public class Analyzer {
 			}
 		}
 		
+		//if old report has auto-aligned content
 		if(config.isAutoalign_previous_translation()){
 			
 			for(int c = 7; c <= 12; c++){	
@@ -413,11 +413,12 @@ public class Analyzer {
 	
 	private void deleteEmptyRange(int idx, Cells cells, int checkcol, int startcol, int endcol){
 		
-	    while(idx < cells.getMaxRow() && (cells.get(idx, checkcol).getStringValue().trim().equals("")) && 
+		int prev_idx = -1;
+	    while(idx != prev_idx && idx < cells.getMaxRow() && (cells.get(idx, checkcol).getStringValue().trim().equals("")) && 
 	    		(cells.get(idx, checkcol).getFormula() == null || cells.get(idx, checkcol).getFormula().trim().equals("")) &&
 	    			(cells.get(idx, checkcol + 1).getStringValue().trim().equals(""))){
-	    	
 	      cells.deleteRange(idx, startcol, idx, endcol, ShiftType.UP);
+	      prev_idx = idx;
 	    }
 	}
 
