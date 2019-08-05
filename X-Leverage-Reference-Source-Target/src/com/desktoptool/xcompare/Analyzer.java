@@ -315,7 +315,7 @@ public class Analyzer {
 				int finalscore = alignedscore == 0?0:matchscore;
 				scores.put(segid, Integer.toString(finalscore));
 			}
-						
+			
 			deleteEmptyRange(oidx+1, ccells, 1, 0, 6);
 			boolean hasTarget = (ccells.get(start, 7).getDisplayStringValue() != null && !ccells.get(start, 7).getDisplayStringValue().trim().equals("")) || (ccells.get(start, 7).getFormula() != null && !ccells.get(start, 7).getFormula().trim().equals(""));
 			if(hasTarget){
@@ -353,13 +353,16 @@ public class Analyzer {
 			}else{
 				conclusions.put(segid, score);
 			}
-			
+
 			start += max_span;
 			
 			if(ccells.get(start, 1).getStringValue().equals("") 
-					&& ccells.get(start, 2).getStringValue().equals("")
-						&& ccells.get(start, 7).getStringValue().equals("")
-							&& ccells.get(start, 8).getStringValue().equals("")){
+					&& ccells.get(start, 2).getStringValue().equals("")){
+				//clean extra rows
+				for(int r = ccells.getMaxRow(); r >= start; r--){
+					ccells.deleteRow(r);
+				}
+				
 				break;
 			}
 		}
@@ -370,7 +373,7 @@ public class Analyzer {
 		
 		cw.save(newreport);
 		
-		FileUtils.populateReportNotesToNotesAndAlignedTargets(populatedfile, notes, conclusions, alignedtargets, scores, config);
+		//FileUtils.populateReportNotesToNotesAndAlignedTargets(populatedfile, notes, conclusions, alignedtargets, scores, config);
 	}
 	
 	private int getEndOfSource(int start, Cells cells, int col){
@@ -413,12 +416,12 @@ public class Analyzer {
 	
 	private void deleteEmptyRange(int idx, Cells cells, int checkcol, int startcol, int endcol){
 		
-		int prev_idx = -1;
-	    while(idx != prev_idx && idx < cells.getMaxRow() && (cells.get(idx, checkcol).getStringValue().trim().equals("")) && 
+		int cnt = idx;
+	    while(cnt < cells.getMaxRow() && idx < cells.getMaxRow() && (cells.get(idx, checkcol).getStringValue().trim().equals("")) && 
 	    		(cells.get(idx, checkcol).getFormula() == null || cells.get(idx, checkcol).getFormula().trim().equals("")) &&
 	    			(cells.get(idx, checkcol + 1).getStringValue().trim().equals(""))){
 	      cells.deleteRange(idx, startcol, idx, endcol, ShiftType.UP);
-	      prev_idx = idx;
+	      cnt++;
 	    }
 	}
 
